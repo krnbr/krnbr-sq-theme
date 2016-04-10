@@ -28,14 +28,6 @@
 	<![endif]-->
 	<link rel="stylesheet" href="css/colors.php?color=AC4147" type="text/css" />
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- Travel Demo Specific Script -->
-	<script type="text/javascript" src="demos/travel/js/datepicker.js"></script>
-	<!-- / -->
 
 	<!-- Document Title
 	============================================= -->
@@ -137,232 +129,227 @@
 
 		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
 
-			<div class="fslider" data-speed="3000" data-pause="7500" data-animation="fade" data-arrows="false" data-pagi="false" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: #333;">
-				<div class="flexslider">
-					<div class="slider-wrap">
-						<div class="slide full-screen force-full-screen" style="background: url('demos/travel/images/slider/1.jpg') center center; background-size: cover; height: 100% !important;"></div>
-						<div class="slide full-screen force-full-screen" style="background: url('demos/travel/images/slider/2.jpg') center center; background-size: cover; height: 100% !important;"></div>
-						<div class="slide full-screen force-full-screen" style="background: url('demos/travel/images/slider/3.jpg') center center; background-size: cover; height: 100% !important;"></div>
+			<div class="slider-parallax-inner">
+
+				<div class="fslider" data-speed="3000" data-pause="7500" data-animation="fade" data-arrows="false" data-pagi="false" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: #333;">
+					<div class="flexslider" style="height: 100% !important;">
+						<div class="slider-wrap" style="height: inherit;">
+							<div class="slide" style="background: url('demos/travel/images/slider/1.jpg') center center; background-size: cover; height: 100% !important;"></div>
+							<div class="slide" style="background: url('demos/travel/images/slider/2.jpg') center center; background-size: cover; height: 100% !important;"></div>
+							<div class="slide" style="background: url('demos/travel/images/slider/3.jpg') center center; background-size: cover; height: 100% !important;"></div>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div id="travel-slider-overlay">
+				<div id="travel-slider-overlay">
 
-				<div class="vertical-middle">
+					<div class="vertical-middle">
 
-					<div class="container clearfix">
+						<div class="container clearfix">
 
-						<div class="tabs travel-organiser-tabs clearfix">
+							<div class="tabs travel-organiser-tabs clearfix">
 
-							<ul class="tab-nav clearfix">
-								<li><a href="#tab-flights"><i class="icon-plane"></i><span class="hidden-xs">Flights</span></a></li>
-								<li><a href="#tab-hotels"><i class="icon-building"></i><span class="hidden-xs">Hotels</span></a></li>
-								<li><a href="#tab-flights-hotels"><span class="visible-xs"><i class="icon-plane"></i> + <i class="icon-building"></i></span><span class="hidden-xs">Flights + Hotels<span class="label label-danger">Save</span></span></a></li>
-								<li><a href="#tab-holidays"><i class="icon-gift"></i><span class="hidden-xs">Holidays</span></a></li>
-							</ul>
+								<ul class="tab-nav clearfix">
+									<li><a href="#tab-flights"><i class="icon-plane"></i><span class="hidden-xs">Flights</span></a></li>
+									<li><a href="#tab-hotels"><i class="icon-building"></i><span class="hidden-xs">Hotels</span></a></li>
+									<li><a href="#tab-flights-hotels"><span class="visible-xs"><i class="icon-plane"></i> + <i class="icon-building"></i></span><span class="hidden-xs">Flights + Hotels<span class="label label-danger">Save</span></span></a></li>
+									<li><a href="#tab-holidays"><i class="icon-gift"></i><span class="hidden-xs">Holidays</span></a></li>
+								</ul>
 
-							<div class="tab-container">
+								<div class="tab-container">
 
-								<div class="tab-content clearfix" id="tab-flights">
-									<div class="heading-block nobottomborder bottommargin-sm clearfix">
-										<h4 class="fleft">Book your Flights</h4>
-										<div class="btn-group fright">
-											<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
-											<button type="button" class="btn btn-default btn-sm">International</button>
-										</div>
-										<div class="clear"></div>
-									</div>
-									<form action="#" method="post" class="nobottommargin">
-										<div class="row">
-											<div class="col-sm-6 col-xs-12 bottommargin-sm">
-												<label for="">From</label>
-												<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
-											</div>
-											<div class="col-sm-6 col-xs-12 bottommargin-sm">
-												<label for="">To</label>
-												<input type="text" value="" class="sm-form-control" placeholder="Eg. New York, United States">
+									<div class="tab-content clearfix" id="tab-flights">
+										<div class="heading-block nobottomborder bottommargin-sm clearfix">
+											<h4 class="fleft">Book your Flights</h4>
+											<div class="btn-group fright">
+												<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
+												<button type="button" class="btn btn-default btn-sm">International</button>
 											</div>
 											<div class="clear"></div>
-											<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
-												<div class="row">
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Departure</label>
-														<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
-													</div>
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Return</label>
-														<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
+										</div>
+										<form action="#" method="post" class="nobottommargin">
+											<div class="row">
+												<div class="col-sm-6 col-xs-12 bottommargin-sm">
+													<label for="">From</label>
+													<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
+												</div>
+												<div class="col-sm-6 col-xs-12 bottommargin-sm">
+													<label for="">To</label>
+													<input type="text" value="" class="sm-form-control" placeholder="Eg. New York, United States">
+												</div>
+												<div class="clear"></div>
+												<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
+													<div class="row">
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Departure</label>
+															<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
+														</div>
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Return</label>
+															<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
+														</div>
 													</div>
 												</div>
+												<div class="col-sm-3 bottommargin-sm">
+													<label for="">Adults</label>
+													<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+												</div>
+												<div class="col-sm-12">
+													<button class="button button-3d nomargin rightmargin-sm">Search Flights</button>
+													<a href="#" class="more-link fright" style="margin-top: 9px;">Advanced Search</a>
+												</div>
 											</div>
-											<div class="col-sm-3 bottommargin-sm">
-												<label for="">Adults</label>
-												<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
-											</div>
-											<div class="col-sm-12">
-												<button class="button button-3d nomargin rightmargin-sm">Search Flights</button>
-												<a href="#" class="more-link fright" style="margin-top: 9px;">Advanced Search</a>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="tab-content clearfix" id="tab-hotels">
-									<div class="heading-block nobottomborder bottommargin-sm clearfix">
-										<h4 class="fleft">Book your Hotels</h4>
-										<div class="btn-group fright">
-											<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
-											<button type="button" class="btn btn-default btn-sm">International</button>
-										</div>
-										<div class="clear"></div>
+										</form>
 									</div>
-									<form action="#" method="post" class="nobottommargin">
-										<div class="row">
-											<div class="col-sm-12 bottommargin-sm">
-												<label for="">City</label>
-												<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
-											</div>
-											<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
-												<div class="row">
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Departure</label>
-														<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
-													</div>
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Return</label>
-														<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-3 bottommargin-sm">
-												<label for="">Rooms</label>
-												<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
-											</div>
-											<div class="col-sm-12">
-												<button class="button button-3d nomargin rightmargin-sm">Search Hotels</button>
-												<a href="#" class="more-link fright" style="margin-top: 9px;">Popular Hotels</a>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="tab-content clearfix" id="tab-flights-hotels">
-									<div class="heading-block nobottomborder bottommargin-sm clearfix">
-										<h4 class="fleft">Book Flights &amp; Hotels</h4>
-										<div class="btn-group fright">
-											<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
-											<button type="button" class="btn btn-default btn-sm">International</button>
-										</div>
-										<div class="clear"></div>
-									</div>
-									<form action="#" method="post" class="nobottommargin">
-										<div class="row">
-											<div class="col-sm-9 bottommargin-sm">
-												<div class="row">
-													<div class="col-sm-6 col-xs-6">
-														<label for="">From</label>
-														<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
-													</div>
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Destination</label>
-														<input type="text" value="" class="sm-form-control" placeholder="Eg. New York, United States">
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-3 bottommargin-sm">
-												<label for="">Adults</label>
-												<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
-											</div>
-											<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
-												<div class="row">
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Departure</label>
-														<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
-													</div>
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Return</label>
-														<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-3  bottommargin-sm">
-												<label for="">Rooms</label>
-												<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
-											</div>
-											<div class="col-sm-12">
-												<button class="button button-3d nomargin rightmargin-sm">Search Flights + Hotels</button>
-												<a href="#" class="more-link fright" style="margin-top: 9px;">Holiday Packages</a>
-											</div>
-										</div>
-									</form>
-								</div>
-								<div class="tab-content clearfix" id="tab-holidays">
-									<div class="heading-block nobottomborder bottommargin-sm clearfix">
-										<h4>Search for Holiday Packages</h4>
-									</div>
-									<form action="#" method="post" class="nobottommargin">
-										<div class="row">
-											<div class="col-sm-6 col-xs-12 bottommargin-sm">
-												<label for="">From</label>
-												<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
-											</div>
-											<div class="col-sm-6 col-xs-12 bottommargin-sm">
-												<label for="">Destination</label>
-												<input type="text" value="" class="sm-form-control" placeholder="Eg. Europe">
+									<div class="tab-content clearfix" id="tab-hotels">
+										<div class="heading-block nobottomborder bottommargin-sm clearfix">
+											<h4 class="fleft">Book your Hotels</h4>
+											<div class="btn-group fright">
+												<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
+												<button type="button" class="btn btn-default btn-sm">International</button>
 											</div>
 											<div class="clear"></div>
-											<div class="col-sm-9 bottommargin-sm">
-												<div class="row">
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Month</label>
-														<select name="month" class="sm-form-control">
-															<option value="">-- Select Month --</option>
-															<option value="November 2014">November 2014</option>
-															<option value="December 2014">December 2014</option>
-															<option value="January 2015">January 2015</option>
-															<option value="February 2015">February 2015</option>
-															<option value="March 2015">March 2015</option>
-															<option value="April 2015">April 2015</option>
-															<option value="May 2015">May 2015</option>
-															<option value="June 2015">June 2015</option>
-														</select>
-													</div>
-													<div class="col-sm-6 col-xs-6">
-														<label for="">Budget</label>
-														<select name="budget" class="sm-form-control">
-															<option value="">-- Select Budget --</option>
-															<option value="November 2014">$99 to $199</option>
-															<option value="December 2014">$200 to $499</option>
-															<option value="January 2015">$500 to $999</option>
-															<option value="February 2015">$1000 to $1999</option>
-															<option value="March 2015">Above $2000</option>
-														</select>
+										</div>
+										<form action="#" method="post" class="nobottommargin">
+											<div class="row">
+												<div class="col-sm-12 bottommargin-sm">
+													<label for="">City</label>
+													<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
+												</div>
+												<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
+													<div class="row">
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Departure</label>
+															<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
+														</div>
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Return</label>
+															<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
+														</div>
 													</div>
 												</div>
+												<div class="col-sm-3 bottommargin-sm">
+													<label for="">Rooms</label>
+													<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+												</div>
+												<div class="col-sm-12">
+													<button class="button button-3d nomargin rightmargin-sm">Search Hotels</button>
+													<a href="#" class="more-link fright" style="margin-top: 9px;">Popular Hotels</a>
+												</div>
 											</div>
-											<div class="col-sm-3 bottommargin-sm">
-												<label for="">Adults</label>
-												<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+										</form>
+									</div>
+									<div class="tab-content clearfix" id="tab-flights-hotels">
+										<div class="heading-block nobottomborder bottommargin-sm clearfix">
+											<h4 class="fleft">Book Flights &amp; Hotels</h4>
+											<div class="btn-group fright">
+												<button type="button" class="btn btn-danger btn-sm bgcolor border-color">Domestic</button>
+												<button type="button" class="btn btn-default btn-sm">International</button>
 											</div>
-											<div class="col-sm-12">
-												<button class="button button-3d nomargin rightmargin-sm">Search Flights</button>
-												<a href="#" class="more-link fright" style="margin-top: 9px;">Advanced Search</a>
-											</div>
+											<div class="clear"></div>
 										</div>
-									</form>
+										<form action="#" method="post" class="nobottommargin">
+											<div class="row">
+												<div class="col-sm-9 bottommargin-sm">
+													<div class="row">
+														<div class="col-sm-6 col-xs-6">
+															<label for="">From</label>
+															<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
+														</div>
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Destination</label>
+															<input type="text" value="" class="sm-form-control" placeholder="Eg. New York, United States">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 bottommargin-sm">
+													<label for="">Adults</label>
+													<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+												</div>
+												<div class="input-daterange travel-date-group col-sm-9 bottommargin-sm">
+													<div class="row">
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Departure</label>
+															<input type="text" value="" class="sm-form-control tleft" name="start" placeholder="MM/DD/YYYY">
+														</div>
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Return</label>
+															<input type="text" value="" class="sm-form-control tleft" name="end" placeholder="MM/DD/YYYY">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3  bottommargin-sm">
+													<label for="">Rooms</label>
+													<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+												</div>
+												<div class="col-sm-12">
+													<button class="button button-3d nomargin rightmargin-sm">Search Flights + Hotels</button>
+													<a href="#" class="more-link fright" style="margin-top: 9px;">Holiday Packages</a>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="tab-content clearfix" id="tab-holidays">
+										<div class="heading-block nobottomborder bottommargin-sm clearfix">
+											<h4>Search for Holiday Packages</h4>
+										</div>
+										<form action="#" method="post" class="nobottommargin">
+											<div class="row">
+												<div class="col-sm-6 col-xs-12 bottommargin-sm">
+													<label for="">From</label>
+													<input type="text" value="" class="sm-form-control" placeholder="Eg. Melbourne, Australia">
+												</div>
+												<div class="col-sm-6 col-xs-12 bottommargin-sm">
+													<label for="">Destination</label>
+													<input type="text" value="" class="sm-form-control" placeholder="Eg. Europe">
+												</div>
+												<div class="clear"></div>
+												<div class="col-sm-9 bottommargin-sm">
+													<div class="row">
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Month</label>
+															<select name="month" class="sm-form-control">
+																<option value="">-- Select Month --</option>
+																<option value="November 2014">November 2014</option>
+																<option value="December 2014">December 2014</option>
+																<option value="January 2015">January 2015</option>
+																<option value="February 2015">February 2015</option>
+																<option value="March 2015">March 2015</option>
+																<option value="April 2015">April 2015</option>
+																<option value="May 2015">May 2015</option>
+																<option value="June 2015">June 2015</option>
+															</select>
+														</div>
+														<div class="col-sm-6 col-xs-6">
+															<label for="">Budget</label>
+															<select name="budget" class="sm-form-control">
+																<option value="">-- Select Budget --</option>
+																<option value="November 2014">$99 to $199</option>
+																<option value="December 2014">$200 to $499</option>
+																<option value="January 2015">$500 to $999</option>
+																<option value="February 2015">$1000 to $1999</option>
+																<option value="March 2015">Above $2000</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 bottommargin-sm">
+													<label for="">Adults</label>
+													<input type="number" min="1" max="10" value="" class="sm-form-control" name="end" placeholder="2">
+												</div>
+												<div class="col-sm-12">
+													<button class="button button-3d nomargin rightmargin-sm">Search Flights</button>
+													<a href="#" class="more-link fright" style="margin-top: 9px;">Advanced Search</a>
+												</div>
+											</div>
+										</form>
+									</div>
+
 								</div>
 
 							</div>
 
 						</div>
-
-						<script>
-							$(function() {
-								$('.travel-date-group').datepicker({
-									autoclose: true,
-									startDate: "today"
-								});
-							});
-						</script>
 
 					</div>
 
@@ -430,7 +417,7 @@
 
 				</div>
 
-				<div id="portfolio" class="portfolio-nomargin portfolio-full portfolio-overlay-open clearfix">
+				<div id="portfolio" class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-overlay-open clearfix">
 
 					<article class="portfolio-item pf-media pf-icons">
 						<div class="portfolio-image">
@@ -538,21 +525,6 @@
 
 				</div>
 
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var $container = $('#portfolio');
-
-						$container.isotope();
-
-						$(window).resize(function() {
-							$container.isotope('layout');
-						});
-
-					});
-
-				</script>
 
 				<div class="common-height clearfix">
 
@@ -618,112 +590,6 @@
 						</div>
 					</div>
 
-					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-					<script type="text/javascript" src="js/jquery.gmap.js"></script>
-
-					<script type="text/javascript">
-
-						jQuery(window).load( function(){
-							jQuery('#popular-dest-map').gMap({
-								address: 'Spain',
-								maptype: 'ROADMAP',
-								zoom: 2,
-								markers: [
-									{
-										address: "Melbourne, Australia",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Ibiza, Spain",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "New York",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Rio de Janeiro, Brazil",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Moscow, Russia",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Rome, Italy",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "New Delhi, India",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Bangkok, Thailand",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Dubai",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									},
-									{
-										address: "Cape Town, South Africa",
-										icon: {
-											image: "images/icons/map-icon-red.png",
-											iconsize: [32, 39],
-											iconanchor: [16,36]
-										}
-									}
-								],
-								doubleclickzoom: false,
-								controls: {
-									panControl: false,
-									zoomControl: true,
-									mapTypeControl: false,
-									scaleControl: false,
-									streetViewControl: false,
-									overviewMapControl: false
-								},
-								styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
-							});
-						});
-
-					</script>
 
 				</div>
 
@@ -995,7 +861,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5>Get Latest <strong>Offers</strong> &amp; <strong>Coupons</strong> by Email:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -1005,22 +871,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								jQuery("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form').find('.form-control').val('');
-												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 					</div>
@@ -1100,9 +950,133 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Travel Demo Specific Script -->
+	<script type="text/javascript" src="demos/travel/js/datepicker.js"></script>
+	<!-- / -->
+
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+	<script type="text/javascript" src="js/jquery.gmap.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<script type="text/javascript">
+
+		$(function() {
+			$('.travel-date-group').datepicker({
+				autoclose: true,
+				startDate: "today"
+			});
+		});
+
+		jQuery(window).load(function(){
+
+			jQuery('#popular-dest-map').gMap({
+				address: 'Spain',
+				maptype: 'ROADMAP',
+				zoom: 2,
+				markers: [
+					{
+						address: "Melbourne, Australia",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Ibiza, Spain",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "New York",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Rio de Janeiro, Brazil",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Moscow, Russia",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Rome, Italy",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "New Delhi, India",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Bangkok, Thailand",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Dubai",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					},
+					{
+						address: "Cape Town, South Africa",
+						icon: {
+							image: "images/icons/map-icon-red.png",
+							iconsize: [32, 39],
+							iconanchor: [16,36]
+						}
+					}
+				],
+				doubleclickzoom: false,
+				controls: {
+					panControl: false,
+					zoomControl: true,
+					mapTypeControl: false,
+					scaleControl: false,
+					streetViewControl: false,
+					overviewMapControl: false
+				},
+				styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+			});
+		});
+
+	</script>
 
 </body>
 </html>

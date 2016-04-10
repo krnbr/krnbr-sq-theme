@@ -21,11 +21,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
 	<!-- Document Title
 	============================================= -->
 	<title>Home - Shop Layout 2 | Canvas</title>
@@ -218,7 +213,7 @@
 								<!-- Mega Menu
 								============================================= -->
 								<li class="mega-menu"><a href="#"><div>Men</div><span>Out of the Box</span></a>
-									<div class="mega-menu-content style-2 col-4 clearfix">
+									<div class="mega-menu-content style-2 clearfix">
 										<ul>
 											<li class="mega-menu-title"><a href="#"><div>Footwear</div></a>
 												<ul>
@@ -685,7 +680,7 @@
 
 					<div class="clear"></div><div class="line"></div>
 
-					<div id="oc-clients-full" class="owl-carousel image-carousel">
+					<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="7">
 
 						<div class="oc-item"><a href="#"><img src="images/clients/logo/1.png" alt="Clients"></a></div>
 						<div class="oc-item"><a href="#"><img src="images/clients/logo/2.png" alt="Clients"></a></div>
@@ -706,29 +701,6 @@
 
 					</div>
 
-					<script type="text/javascript">
-
-						jQuery(document).ready(function($) {
-
-							var ocClients = $("#oc-clients-full");
-
-							ocClients.owlCarousel({
-								margin: 30,
-								nav: false,
-								autoplay: true,
-								dots: false,
-								autoplayHoverPause: true,
-								responsive:{
-									0:{ items:2 },
-									480:{ items:3 },
-									768:{ items:4 },
-									992:{ items:5 },
-									1200:{ items:7 }
-								}
-							});
-						});
-
-					</script>
 
 				</div>
 
@@ -885,7 +857,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -895,22 +867,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								$("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										$(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										$(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												$(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												$('#widget-subscribe-form').find('.form-control').val('');
-												$('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -1012,6 +968,11 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

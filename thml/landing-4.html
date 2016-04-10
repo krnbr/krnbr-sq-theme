@@ -21,11 +21,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
 	<!-- Document Title
 	============================================= -->
 	<title>Landing Page - Style 4 | Canvas</title>
@@ -78,35 +73,39 @@
 
 		<section id="slider" class="slider-parallax dark full-screen" style="background: url(images/landing/landing1.jpg) center;">
 
-			<div class="container clearfix">
+			<div class="slider-parallax-inner">
 
-				<div class="vertical-middle">
+				<div class="container clearfix">
 
-					<div class="heading-block center nobottomborder">
-						<h1 data-animate="fadeInUp">It's your time to <strong>create</strong> Landing Pages for <strong>FREE</strong></h1>
-						<span data-animate="fadeInUp" data-delay="300">Building a Landing Page was never so Easy &amp; Interactive.</span>
+					<div class="vertical-middle">
+
+						<div class="heading-block center nobottomborder">
+							<h1 data-animate="fadeInUp">It's your time to <strong>create</strong> Landing Pages for <strong>FREE</strong></h1>
+							<span data-animate="fadeInUp" data-delay="300">Building a Landing Page was never so Easy &amp; Interactive.</span>
+						</div>
+
+						<form action="#" method="post" role="form" class="landing-wide-form clearfix">
+							<div class="col_four_fifth nobottommargin">
+								<div class="col_one_third nobottommargin">
+									<input type="text" class="form-control input-lg not-dark" value="" placeholder="Your Name*">
+								</div>
+								<div class="col_one_third nobottommargin">
+									<input type="email" class="form-control input-lg not-dark" value="" placeholder="Your Email*">
+								</div>
+								<div class="col_one_third col_last nobottommargin">
+									<input type="password" class="form-control input-lg not-dark" value="" placeholder="Choose Password*">
+								</div>
+							</div>
+							<div class="col_one_fifth col_last nobottommargin">
+								<button class="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit" style="">START FREE TRIAL</button>
+							</div>
+						</form>
+
 					</div>
 
-					<form action="#" method="post" role="form" class="landing-wide-form clearfix">
-						<div class="col_four_fifth nobottommargin">
-							<div class="col_one_third nobottommargin">
-								<input type="text" class="form-control input-lg not-dark" value="" placeholder="Your Name*">
-							</div>
-							<div class="col_one_third nobottommargin">
-								<input type="email" class="form-control input-lg not-dark" value="" placeholder="Your Email*">
-							</div>
-							<div class="col_one_third col_last nobottommargin">
-								<input type="password" class="form-control input-lg not-dark" value="" placeholder="Choose Password*">
-							</div>
-						</div>
-						<div class="col_one_fifth col_last nobottommargin">
-							<button class="btn btn-lg btn-danger btn-block nomargin" value="submit" type="submit" style="">START FREE TRIAL</button>
-						</div>
-					</form>
+					<a href="#" data-scrollto="#section-features" class="one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
 				</div>
-
-				<a href="#" data-scrollto="#section-features" class="one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
 			</div>
 
@@ -421,12 +420,6 @@
 
 					</div>
 
-					<script>
-					  $(function() {
-						$( "#side-navigation" ).tabs({ show: { effect: "fade", duration: 400 } });
-					  });
-					</script>
-
 				</div>
 
 				<div class="section footer-stick">
@@ -574,7 +567,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -584,22 +577,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								$("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										$(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										$(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												$(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												$('#widget-subscribe-form').find('.form-control').val('');
-												$('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -702,9 +679,20 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$( "#side-navigation" ).tabs({ show: { effect: "fade", duration: 400 } });
+		});
+	</script>
 
 </body>
 </html>

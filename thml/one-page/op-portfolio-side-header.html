@@ -29,10 +29,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/plugins.js"></script>
 
 	<!-- Document Title
 	============================================= -->
@@ -119,7 +115,7 @@
 
 				<!-- Portfolio Items
 				============================================= -->
-				<div id="portfolio" class="portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
+				<div id="portfolio" class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
 
 					<article class="portfolio-item pf-media pf-icons wide">
 						<div class="portfolio-image">
@@ -220,32 +216,6 @@
 					</article>
 
 				</div><!-- #portfolio end -->
-
-				<!-- Portfolio Script
-				============================================= -->
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var jQuerycontainer = jQuery('#portfolio');
-
-						jQuerycontainer.isotope({
-							transitionDuration: '0.65s',
-							masonry: {
-								columnWidth: jQuerycontainer.find('.portfolio-item:not(.wide)')[0]
-							}
-						});
-
-						jQuery(window).resize(function() {
-							jQuerycontainer.isotope('layout');
-							SEMICOLON.portfolio.portfolioDescMargin();
-						});
-
-						var t = setTimeout(function(){ SEMICOLON.portfolio.portfolioDescMargin(); }, 200);
-
-					});
-
-				</script><!-- Portfolio Script End -->
 
 				<div class="section dark notopmargin">
 					<div class="container col-padding center clearfix">
@@ -355,6 +325,11 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

@@ -21,17 +21,10 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/navigation.css">
 
 	<!-- Document Title
 	============================================= -->
@@ -63,6 +56,10 @@
 			letter-spacing: 3px;
 			font-family: 'Raleway', sans-serif;
 		}
+
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
 
 	</style>
 
@@ -226,8 +223,8 @@
 							<!-- Mega Menu
 							============================================= -->
 							<li class="mega-menu"><a href="#"><div>Men</div><span>Out of the Box</span></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Footwear</div></a>
 											<ul>
 												<li><a href="#"><div>Casual Shoes</div></a></li>
@@ -240,7 +237,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Clothing</div></a>
 											<ul>
 												<li><a href="#"><div>Casual Shirts</div></a></li>
@@ -253,7 +250,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Accessories</div></a>
 											<ul>
 												<li><a href="#"><div>Bags &amp; Backpacks</div></a></li>
@@ -266,7 +263,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>New Arrivals</div></a>
 											<ul>
 												<li><a href="#"><div>T-Shirts</div></a></li>
@@ -282,8 +279,8 @@
 								</div>
 							</li><!-- .mega-menu end -->
 							<li><a href="#"><div>Women</div><span>Out of the Box</span></a>
-								<div class="mega-menu-content style-2 col-2 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-6">
 										<li class="mega-menu-title"><a href="#"><div>Footwear</div></a>
 											<ul>
 												<li><a href="#"><div>Casual Shoes</div></a></li>
@@ -296,7 +293,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-6">
 										<li class="mega-menu-title"><a href="#"><div>Clothing</div></a>
 											<ul>
 												<li><a href="#"><div>Casual Shirts</div></a></li>
@@ -426,7 +423,7 @@
 					data-elementdelay="0.01"
 					data-endelementdelay="0.1"
 					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style=" color: #333; max-width: 430px; white-space: normal; line-height: 1.15;">Latest Fashion Collections</div>
+					data-endeasing="Power4.easeIn" style=" color: #333; max-width: 430px; line-height: 1.15;">Latest Fashion<br>Collections</div>
 
 					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
 					data-x="570"
@@ -502,7 +499,7 @@
 					data-elementdelay="0.01"
 					data-endelementdelay="0.1"
 					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style=" color: #333; white-space: normal; line-height: 1.15;">Messenger Bags</div>
+					data-endeasing="Power4.easeIn" style=" color: #333; line-height: 1.15;">Messenger Bags</div>
 
 					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
 					data-x="0"
@@ -550,92 +547,6 @@
 			</ul>
 			</div>
 			</div>
-
-			<script type="text/javascript">
-
-				jQuery(document).ready(function() {
-
-					jQuery('.tp-banner').show().revolution(
-					{
-						dottedOverlay:"none",
-						delay:16000,
-						startwidth:1140,
-						startheight:500,
-						hideThumbs:200,
-
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:5,
-
-						navigationType:"none",
-						navigationArrows:"solo",
-						navigationStyle:"preview2",
-
-						touchenabled:"on",
-						onHoverStop:"on",
-
-						swipe_velocity: 0.7,
-						swipe_min_touches: 1,
-						swipe_max_touches: 1,
-						drag_block_vertical: false,
-
-						parallax:"mouse",
-						parallaxBgFreeze:"on",
-						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-
-						keyboardNavigation:"off",
-
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:0,
-						navigationVOffset:20,
-
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
-
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
-
-						shadow:0,
-						fullWidth:"on",
-						fullScreen:"off",
-
-						spinner:"spinner4",
-
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
-
-						shuffle:"off",
-
-						autoHeight:"off",
-						forceFullWidth:"off",
-
-
-
-						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,
-						hideBulletsOnMobile:"off",
-						hideArrowsOnMobile:"off",
-						hideThumbsUnderResolution:0,
-
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						startWithSlide:0,
-						fullScreenOffsetContainer: ".header"
-					});
-
-
-
-
-				}); //ready
-
-			</script>
 
 			<!-- END REVOLUTION SLIDER -->
 
@@ -685,7 +596,7 @@
 
 							<div class="tab-content clearfix" id="tabs-9">
 
-								<div id="shop" class="clearfix">
+								<div id="shop" class="shop clearfix">
 
 									<div class="product clearfix">
 										<div class="product-image">
@@ -789,7 +700,7 @@
 
 							<div class="tab-content clearfix" id="tabs-10">
 
-								<div id="shop" class="clearfix">
+								<div id="shop" class="shop clearfix">
 
 									<div class="product clearfix">
 										<div class="product-image">
@@ -886,7 +797,7 @@
 
 							<div class="tab-content clearfix" id="tabs-11">
 
-								<div id="shop" class="clearfix">
+								<div id="shop" class="shop clearfix">
 
 									<div class="product clearfix">
 										<div class="product-image">
@@ -1001,37 +912,21 @@
 						<p>Jane Jacobs educate, leverage affiliate Martin Luther King Jr. agriculture conflict resolution dignity. Cooperation international progress non-partisan lasting change meaningful.</p>
 					</div>
 
-					<div class="col_one_third">
+					<div class="col_one_third subscribe-widget">
 						<div class="fancy-title title-border">
 							<h4>Subscribe for Offers</h4>
 						</div>
 						<p>Subscribe to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</p>
-						<div id="widget-subscribe-form-result2" data-notify-type="success" data-notify-msg=""></div>
+						<div class="widget-subscribe-form-result"></div>
 						<form id="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 							<div class="input-group divcenter">
 								<span class="input-group-addon"><i class="icon-email2"></i></span>
-								<input type="email" name="widget-subscribe-form2-email" class="form-control required email" placeholder="Enter your Email">
+								<input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit">Subscribe</button>
 								</span>
 							</div>
 						</form>
-						<script type="text/javascript">
-							jQuery("#widget-subscribe-form2").validate({
-								submitHandler: function(form) {
-									jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-									jQuery(form).ajaxSubmit({
-										target: '#widget-subscribe-form2-result',
-										success: function() {
-											jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-											jQuery('#widget-subscribe-form2').find('.form-control').val('');
-											jQuery('#widget-subscribe-form2-result').attr('data-notify-msg', jQuery('#widget-subscribe-form2-result').html()).html('');
-											SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form2-result'));
-										}
-									});
-								}
-							});
-						</script>
 					</div>
 
 					<div class="col_one_third col_last">
@@ -1192,7 +1087,7 @@
 							<img src="images/services/4.jpg" alt="Image" class="nobottommargin">
 						</div>
 
-						<div class="col_half nobottommargin col_last">
+						<div class="col_half subscribe-widget nobottommargin col_last">
 
 							<div class="heading-block topmargin-lg">
 								<h3><strong>GET 20% OFF*</strong></h3>
@@ -1201,33 +1096,16 @@
 
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet cumque, perferendis accusamus porro illo exercitationem molestias.</p>
 
-							<div id="widget-subscribe-form3-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form3" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group" style="max-width:400px;">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
-									<input type="email" name="widget-subscribe-form3-email" class="form-control required email" placeholder="Enter your Email">
+									<input type="email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
 									<span class="input-group-btn">
 										<button class="btn btn-danger" type="submit">Subscribe Now</button>
 									</span>
 								</div>
 							</form>
-
-							<script>
-								jQuery("#widget-subscribe-form3").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form3-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form3').find('.form-control').val('');
-												jQuery('#widget-subscribe-form3-result').attr('data-notify-msg', jQuery('#widget-subscribe-form3-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form3-result'));
-											}
-										});
-									}
-								});
-							</script>
 
 						</div>
 
@@ -1360,7 +1238,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -1370,22 +1248,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								jQuery("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form').find('.form-control').val('');
-												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -1488,9 +1350,101 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+	<script type="text/javascript">
+
+		var tpj=jQuery;
+		tpj.noConflict();
+
+		tpj(document).ready(function() {
+
+			var apiRevoSlider = tpj('.tp-banner').show().revolution(
+			{
+				sliderType:"standard",
+				jsFileLocation:"include/rs-plugin/js/",
+				sliderLayout:"fullwidth",
+				dottedOverlay:"none",
+				delay:9000,
+				navigation: {},
+				responsiveLevels:[1200,992,768,480,320],
+				gridwidth:1140,
+				gridheight:500,
+				lazyType:"none",
+				shadow:0,
+				spinner:"off",
+				autoHeight:"off",
+				disableProgressBar:"on",
+				hideThumbsOnMobile:"off",
+				hideSliderAtLimit:0,
+				hideCaptionAtLimit:0,
+				hideAllCaptionAtLilmit:0,
+				debugMode:false,
+				fallbacks: {
+					simplifyAll:"off",
+					disableFocusListener:false,
+				},
+				navigation: {
+					keyboardNavigation:"off",
+					keyboard_direction: "horizontal",
+					mouseScrollNavigation:"off",
+					onHoverStop:"off",
+					touch:{
+						touchenabled:"on",
+						swipe_threshold: 75,
+						swipe_min_touches: 1,
+						swipe_direction: "horizontal",
+						drag_block_vertical: false
+					},
+					arrows: {
+						style: "ares",
+						enable: true,
+						hide_onmobile: false,
+						hide_onleave: false,
+						tmp: '<div class="tp-title-wrap">	<span class="tp-arr-titleholder">{{title}}</span> </div>',
+						left: {
+							h_align: "left",
+							v_align: "center",
+							h_offset: 10,
+							v_offset: 0
+						},
+						right: {
+							h_align: "right",
+							v_align: "center",
+							h_offset: 10,
+							v_offset: 0
+						}
+					}
+				}
+			});
+
+			apiRevoSlider.bind("revolution.slide.onloaded",function (e) {
+				SEMICOLON.slider.sliderParallaxDimensions();
+			});
+
+		}); //ready
+
+	</script>
 
 </body>
 </html>

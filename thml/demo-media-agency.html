@@ -29,11 +29,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
 	<!-- Document Title
 	============================================= -->
 	<title>Media Agency | Canvas</title>
@@ -243,7 +238,7 @@
 
 						<!-- Portfolio Items
 						============================================= -->
-						<div id="portfolio" class="portfolio-nomargin portfolio-full portfolio-3 portfolio-masonry mixed-masonry clearfix">
+						<div id="portfolio" class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-3 portfolio-masonry mixed-masonry clearfix">
 
 							<article class="portfolio-item pf-media pf-icons wide">
 								<div class="portfolio-image imagescale">
@@ -352,32 +347,6 @@
 
 						</div><!-- #portfolio end -->
 
-						<!-- Portfolio Script
-						============================================= -->
-						<script type="text/javascript">
-
-							jQuery(window).load(function(){
-
-								var jQuerycontainer = jQuery('#portfolio');
-
-								jQuerycontainer.isotope({
-									transitionDuration: '0.65s',
-									masonry: {
-										columnWidth: jQuerycontainer.find('.portfolio-item:not(.wide)')[0]
-									}
-								});
-
-								jQuery(window).resize(function() {
-									jQuerycontainer.isotope('layout');
-									SEMICOLON.portfolio.portfolioDescMargin();
-								});
-
-								var t = setTimeout(function(){ SEMICOLON.portfolio.portfolioDescMargin(); }, 200);
-
-							});
-
-						</script><!-- Portfolio Script End -->
-
 					</div>
 
 					<div class="line topmargin-lg bottommargin-lg"></div>
@@ -390,59 +359,44 @@
 
 							<div class="col-md-8">
 
-								<div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+								<div class="contact-widget">
 
-								<form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+									<div class="contact-form-result"></div>
 
-									<div class="form-process"></div>
+									<form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
 
-									<div class="col_half">
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
-									</div>
-									<div class="col_half col_last">
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
-									</div>
+										<div class="form-process"></div>
 
-									<div class="clear"></div>
+										<div class="col_half">
+											<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
+										</div>
+										<div class="col_half col_last">
+											<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
+										</div>
 
-									<div class="col_full">
-										<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
-									</div>
+										<div class="clear"></div>
 
-									<div class="col_full">
-										<textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
-									</div>
+										<div class="col_full">
+											<input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
+										</div>
 
-									<div class="col_full">
-										<button class="button button-black noleftmargin topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-									</div>
+										<div class="col_full">
+											<textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
+										</div>
 
-									<div class="clear"></div>
+										<div class="col_full">
+											<button class="button button-black noleftmargin topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+										</div>
 
-									<div class="col_full hidden">
-										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-									</div>
+										<div class="clear"></div>
 
-								</form>
+										<div class="col_full hidden">
+											<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+										</div>
 
-								<script type="text/javascript">
+									</form>
 
-									$("#template-contactform").validate({
-										submitHandler: function(form) {
-											$('.form-process').fadeIn();
-											$(form).ajaxSubmit({
-												target: '#contact-form-result',
-												success: function() {
-													$('.form-process').fadeOut();
-													$(form).find('.sm-form-control').val('');
-													$('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
-													SEMICOLON.widget.notifications($('#contact-form-result'));
-												}
-											});
-										}
-									});
-
-								</script>
+								</div>
 
 							</div>
 
@@ -487,9 +441,28 @@
 
 	</div><!-- #wrapper end -->
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<script type="text/javascript">
+
+		jQuery(window).load(function(){
+
+			jQuery(window).resize(function() {
+				SEMICOLON.portfolio.portfolioDescMargin();
+			});
+
+			var t = setTimeout(function(){ SEMICOLON.portfolio.portfolioDescMargin(); }, 200);
+
+		});
+
+	</script>
 
 </body>
 </html>

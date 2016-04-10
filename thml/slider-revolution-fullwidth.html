@@ -21,17 +21,10 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/navigation.css">
 
 	<!-- Document Title
 	============================================= -->
@@ -63,6 +56,9 @@
 			letter-spacing: 3px;
 			font-family: 'Raleway', sans-serif;
 		}
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
 
 	</style>
 
@@ -170,6 +166,7 @@
 										<ul>
 											<li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
 												<ul>
+													<li><a href="rs-demo-premium-concept.html"><div>Premium Templates</div></a></li>
 													<li><a href="slider-revolution.html"><div>Full Screen</div></a></li>
 													<li><a href="slider-revolution-fullwidth.html"><div>Full Width</div></a></li>
 													<li><a href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a></li>
@@ -263,6 +260,7 @@
 											<li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
 											<li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
 											<li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
+											<li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
 										</ul>
 									</li>
 									<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
@@ -274,6 +272,7 @@
 											<li><a href="side-panel-light.html"><div>Light Background</div></a></li>
 										</ul>
 									</li>
+									<li><a href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a></li>
 									<li><a href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
 										<ul>
 											<li><a href="header-light.html"><div>Menu - Style 1</div></a></li>
@@ -379,8 +378,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Pages</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
 											<ul>
 												<li><a href="about.html"><div>About Us</div></a></li>
@@ -394,7 +393,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Utility</div></a>
 											<ul>
 												<li><a href="services.html"><div>Services - Layout 1</div></a></li>
@@ -408,7 +407,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Layout Grids</div></a>
 											<ul>
 												<li><a href="full-width.html"><div>Full Width</div></a></li>
@@ -422,7 +421,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Miscellaneous</div></a>
 											<ul>
 												<li><a href="login-register.html"><div>Login/Register</div></a></li>
@@ -439,8 +438,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
-								<div class="mega-menu-content style-2 col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Grids</div></a>
 											<ul>
 												<li><a href="portfolio-1.html"><div>1 Column</div></a></li>
@@ -452,7 +451,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="portfolio-mixed-masonry.html"><div>Mixed Columns</div></a></li>
@@ -464,7 +463,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Loading Styles</div></a>
 											<ul>
 												<li><a href="portfolio.html"><div>jQuery Filter</div></a></li>
@@ -476,7 +475,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Single Project</div></a>
 											<ul>
 												<li><a href="portfolio-single-extended.html"><div>Extended Item</div></a></li>
@@ -488,7 +487,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Layouts</div></a>
 											<ul>
 												<li><a href="portfolio-nomargin.html"><div>Default</div></a></li>
@@ -503,8 +502,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Blog</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Default</div></a>
 											<ul>
 												<li><a href="blog.html"><div>Right Sidebar</div></a></li>
@@ -521,7 +520,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="blog-masonry.html"><div>4 Columns</div></a></li>
@@ -538,7 +537,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Small Thumbs</div></a>
 											<ul>
 												<li><a href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
@@ -555,7 +554,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Single</div></a>
 											<ul>
 												<li><a href="blog-single.html"><div>Default Layout</div></a></li>
@@ -613,8 +612,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
-								<div class="mega-menu-content col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content clearfix">
+									<ul class="mega-menu-column col-5">
 										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
 										<li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
 										<li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
@@ -622,8 +621,10 @@
 										<li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
 										<li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
 										<li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
+										<li><a href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a></li>
+										<li><a href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
 										<li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
 										<li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
@@ -631,8 +632,10 @@
 										<li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
 										<li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
 										<li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
+										<li><a href="component-editable.html"><div><i class="icon-edit"></i>Editable Fields</div></a></li>
+										<li><a href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="lists-panels.html"><div><i class="icon-th-list"></i>Lists &amp; Panels</div></a></li>
 										<li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
 										<li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
@@ -640,8 +643,10 @@
 										<li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
 										<li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
 										<li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
+										<li><a href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a></li>
+										<li><a href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
 										<li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
 										<li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
@@ -649,8 +654,10 @@
 										<li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
 										<li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
 										<li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
+										<li><a href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a></li>
+										<li><a href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
 										<li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
 										<li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
@@ -658,6 +665,8 @@
 										<li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
 										<li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
 										<li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
+										<li><a href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a></li>
+										<li><a href="component-typeahead.html"><div><i class="icon-type"></i>Input Typeahead</div></a></li>
 									</ul>
 								</div>
 							</li>
@@ -718,337 +727,251 @@
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-parallax revslider-wrap clearfix">
+			<div class="slider-parallax-inner">
+				<!--
+				#################################
+					- THEMEPUNCH BANNER -
+				#################################
+				-->
+				<div class="tp-banner-container">
+					<div class="tp-banner" >
+						<ul>
+							<!-- SLIDE  -->
+							<li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/ken-2-thumb.jpg" data-delay="15000"  data-saveperformance="off"  data-title="Unlimited Possibilities">
+								<!-- MAIN IMAGE -->
+								<img src="images/slider/rev/ken-2.jpg"  alt="kenburns6"  data-bgposition="center bottom" data-kenburns="on" data-duration="25000" data-ease="Linear.easeNone" data-scale="100" data-scaleend="120" data-bgpositionend="center top">
+								<!-- LAYERS -->
 
-			<!--
-			#################################
-				- THEMEPUNCH BANNER -
-			#################################
-			-->
-			<div class="tp-banner-container">
-				<div class="tp-banner" >
-					<ul>    <!-- SLIDE  -->
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+								data-x="453"
+								data-y="170"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; white-space: nowrap;">Why Choose Canvas?</div>
 
-				<!-- SLIDE  -->
-				<li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/ken-2-thumb.jpg" data-delay="15000"  data-saveperformance="off"  data-title="Unlimited Possibilities">
-					<!-- MAIN IMAGE -->
-					<img src="images/slider/rev/ken-2.jpg"  alt="kenburns6"  data-bgposition="center bottom" data-kenburns="on" data-duration="25000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="120" data-bgpositionend="center top">
-					<!-- LAYERS -->
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+								data-x="264"
+								data-y="185"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; white-space: nowrap;">Unlimited Possibilities</div>
 
-					<!-- LAYER NR. 2 -->
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="453"
-					data-y="170"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #333;">Why Choose Canvas?</div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text"
+								data-x="245"
+								data-y="295"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; max-width: 650px; white-space: normal;">Create whatever you require for your Business to bloom with Tons of Customization Possibilities.</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="264"
-					data-y="185"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #333;">Unlimited Possibilities</div>
+								<div class="tp-caption customin ltl tp-resizeme"
+								data-x="508"
+								data-y="405"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1550"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-border button-large button-rounded tright nomargin"><span>Browse</span><i class="icon-angle-right"></i></a></div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text"
-					data-x="245"
-					data-y="295"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; max-width: 650px; white-space: normal;">Create whatever you require for your Business to bloom with Tons of Customization Possibilities.</div>
+							</li>
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="508"
-					data-y="405"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-border button-large button-rounded tright nomargin"><span>Browse</span><i class="icon-angle-right"></i></a></div>
+							<li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/bg1-thumb.jpg"  data-saveperformance="off"  data-title="Fixed-Size Video">
+								<!-- MAIN IMAGE -->
+								<img src="images/slider/rev/bg1.jpg"  alt="citybg" data-lazyload="images/slider/rev/bg1.jpg" data-bgposition="center top" data-scale="cover" data-bgrepeat="no-repeat">
+								<!-- LAYERS -->
 
-				</li>
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption customin ltl tp-resizeme"
+								data-x="640"
+								data-y="45"
+								data-customin="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:400;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="400"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn"><img src="images/services/imac2.png" alt="imac"></div>
 
-				<li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="images/slider/rev/bg1-thumb.jpg"  data-saveperformance="off"  data-title="Fixed-Size Video">
-					<!-- MAIN IMAGE -->
-					<img src="images/slider/rev/bg1.jpg"  alt="citybg" data-lazyload="images/slider/rev/bg1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-					<!-- LAYERS -->
+								<div class="tp-caption customin ltl tp-resizeme"
+								data-x="970"
+								data-y="320"
+								data-customin="x:0;y:100;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:400;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="400"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn"><img src="images/services/iphone3.png" alt="iphone"></div>
 
-					<!-- LAYER NR. 1 -->
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="640"
-					data-y="45"
-					data-customin="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="400"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn"><img src="images/services/imac2.png" alt="imac"></div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+								data-x="0"
+								data-y="165"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="white-space: nowrap;">Have Multiple Devices? No Worries!</div>
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="970"
-					data-y="320"
-					data-customin="x:0;y:100;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="400"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn"><img src="images/services/iphone3.png" alt="iphone"></div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+								data-x="-3"
+								data-y="180"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="font-size: 56px; white-space: nowrap;">Responsive Retina Ready</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="0"
-					data-y="165"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="">Have Multiple Devices? No Worries!</div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
+								data-x="0"
+								data-y="280"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="max-width: 550px; white-space: normal;">Canvas has Mobile Ready Design &amp; Retina Graphics Support for seamless experience on all types of Devices.</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="-3"
-					data-y="180"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="font-size: 56px;">Responsive Retina Ready</div>
+								<div class="tp-caption customin ltl tp-resizeme"
+								data-x="0"
+								data-y="385"
+								data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1550"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Start Tour</span> <i class="icon-angle-right"></i></a></div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
-					data-x="0"
-					data-y="280"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="max-width: 550px; white-space: normal;">Canvas has Mobile Ready Design &amp; Retina Graphics Support for seamless experience on all types of Devices.</div>
+							</li>
+							<li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500"data-thumb="images/slider/rev/bg2-thumb.jpg"  data-saveperformance="off"  data-title="Fixed-Size Video">
+								<!-- MAIN IMAGE -->
+								<img src="images/slider/rev/bg2.jpg"  alt="kenburns6"  data-bgposition="left bottom" data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-scale="100" data-scaleend="120" data-bgpositionend="right top">
+								<!-- LAYERS -->
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="0"
-					data-y="385"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Start Tour</span> <i class="icon-angle-right"></i></a></div>
+								<div class="tp-caption customin"
+								data-x="0"
+								data-y="130"
+								data-customin="x:0;y:0;z:0;rotationZ:0;scaleX:0.6;scaleY:0.6;skewX:0;skewY:0;s:850;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+								data-speed="850"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn"><iframe src='http://player.vimeo.com/video/102501580?title=0&byline=0&portrait=0;api=1' width='600' height='340' style='width:600px;height:340px;border: none !important;'></iframe></div>
 
-				</li>
-				<li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500"data-thumb="images/slider/rev/bg2-thumb.jpg"  data-saveperformance="off"  data-title="Fixed-Size Video">
-					<!-- MAIN IMAGE -->
-					<img src="images/slider/rev/bg2.jpg"  alt="kenburns6"  data-bgposition="left bottom" data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="120" data-bgpositionend="right top">
-					<!-- LAYERS -->
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+								data-x="675"
+								data-y="165"
+								data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1000"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="white-space: nowrap;">Need to show Videos?</div>
 
-					<div class="tp-caption customin"
-					data-x="0"
-					data-y="130"
-					data-customin="x:0;y:0;z:0;rotationZ:0;scaleX:0.6;scaleY:0.6;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
-					data-speed="850"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn"><iframe src='http://player.vimeo.com/video/102501580?title=0&byline=0&portrait=0;api=1' width='600' height='340' style='width:600px;height:340px;border: none !important;'></iframe></div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+								data-x="672"
+								data-y="180"
+								data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1200"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="font-size: 56px; white-space: nowrap;">Embedded Videos</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="675"
-					data-y="165"
-					data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="">Need to show Videos?</div>
+								<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
+								data-x="675"
+								data-y="280"
+								data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1400"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn" style="max-width: 450px; white-space: normal;">Show off your Youtube or Vimeo Videos in Style with an Autoplay Option.</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="672"
-					data-y="180"
-					data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="font-size: 56px;">Embedded Videos</div>
+								<div class="tp-caption customin ltl tp-resizeme"
+								data-x="675"
+								data-y="385"
+								data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+								data-speed="800"
+								data-start="1550"
+								data-easing="easeOutQuad"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.01"
+								data-endelementdelay="0.1"
+								data-endspeed="1000"
+								data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Embed Now</span> <i class="icon-angle-right"></i></a></div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
-					data-x="675"
-					data-y="280"
-					data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="max-width: 450px; white-space: normal;">Show off your Youtube or Vimeo Videos in Style with an Autoplay Option.</div>
-
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="675"
-					data-y="385"
-					data-customin="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Embed Now</span> <i class="icon-angle-right"></i></a></div>
-
-				</li>
-			</ul>
+							</li>
+						</ul>
+					</div>
+				</div><!-- END REVOLUTION SLIDER -->
 			</div>
-			</div>
-
-			<script type="text/javascript">
-
-				jQuery(document).ready(function() {
-
-					jQuery('.tp-banner').show().revolution(
-					{
-						dottedOverlay:"none",
-						delay:16000,
-						startwidth:1140,
-						startheight:600,
-						hideThumbs:200,
-
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:5,
-
-						navigationType:"bullet",
-						navigationArrows:"solo",
-						navigationStyle:"preview4",
-
-						touchenabled:"on",
-						onHoverStop:"on",
-
-						swipe_velocity: 0.7,
-						swipe_min_touches: 1,
-						swipe_max_touches: 1,
-						drag_block_vertical: false,
-
-						parallax:"mouse",
-						parallaxBgFreeze:"on",
-						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-
-						keyboardNavigation:"off",
-
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:0,
-						navigationVOffset:20,
-
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
-
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
-
-						shadow:0,
-						fullWidth:"on",
-						fullScreen:"off",
-
-						spinner:"spinner4",
-
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
-
-						shuffle:"off",
-
-						autoHeight:"off",
-						forceFullWidth:"off",
-						hideTimerBar:"on",
-
-
-						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,
-						hideBulletsOnMobile:"off",
-						hideArrowsOnMobile:"off",
-						hideThumbsUnderResolution:0,
-
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						startWithSlide:0,
-						fullScreenOffsetContainer: ".header"
-					});
-
-				}); //ready
-
-			</script>
-
-			<!-- END REVOLUTION SLIDER -->
-
 		</section>
 
 		<!-- Content
@@ -1131,7 +1054,7 @@
 
 					<div class="clear"></div><div class="line"></div>
 
-					<div id="oc-clients-full" class="owl-carousel image-carousel">
+					<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false" data-loop="true" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
 
 						<a href="#"><img src="images/clients/1.png" alt="Clients"></a>
 						<a href="#"><img src="images/clients/2.png" alt="Clients"></a>
@@ -1147,33 +1070,6 @@
 						<a href="#"><img src="images/clients/12.png" alt="Clients"></a>
 
 					</div>
-
-					<script type="text/javascript">
-
-						jQuery(document).ready(function($) {
-
-							var ocClients = $("#oc-clients-full");
-
-							ocClients.owlCarousel({
-								items: 6,
-								margin: 30,
-								loop: true,
-								nav: false,
-								autoplay: true,
-								dots: false,
-								autoplayHoverPause: true,
-								responsive:{
-									0:{ items:2 },
-									480:{ items:3 },
-									768:{ items:4 },
-									992:{ items:5 },
-									1200:{ items:6 }
-								}
-							});
-
-						});
-
-					</script>
 
 				</div>
 
@@ -1303,7 +1199,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -1313,22 +1209,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								jQuery("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form').find('.form-control').val('');
-												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -1431,9 +1311,152 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+	<script type="text/javascript">
+
+		var tpj=jQuery;
+		tpj.noConflict();
+
+		tpj(document).ready(function() {
+
+			var apiRevoSlider = tpj('.tp-banner').show().revolution(
+			{
+				sliderType:"standard",
+				jsFileLocation:"include/rs-plugin/js/",
+				sliderLayout:"fullwidth",
+				dottedOverlay:"none",
+				delay:16000,
+				startwidth:1140,
+				startheight:600,
+				hideThumbs:200,
+
+				thumbWidth:100,
+				thumbHeight:50,
+				thumbAmount:5,
+
+				navigation: {
+					keyboardNavigation:"off",
+					keyboard_direction: "horizontal",
+					mouseScrollNavigation:"off",
+					onHoverStop:"off",
+					touch:{
+						touchenabled:"on",
+						swipe_threshold: 75,
+						swipe_min_touches: 1,
+						swipe_direction: "horizontal",
+						drag_block_vertical: false
+					},
+					arrows: {
+                        style: "hermes",
+                        enable: true,
+                        hide_onmobile: false,
+                        hide_onleave: false,
+                        tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div>	<div class="tp-arr-titleholder">{{title}}</div>	</div>',
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 10,
+                            v_offset: 0
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 10,
+                            v_offset: 0
+                        }
+                    }
+				},
+
+				touchenabled:"on",
+				onHoverStop:"on",
+
+				swipe_velocity: 0.7,
+				swipe_min_touches: 1,
+				swipe_max_touches: 1,
+				drag_block_vertical: false,
+
+				parallax:"mouse",
+				parallaxBgFreeze:"on",
+				parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+				keyboardNavigation:"off",
+
+				navigationHAlign:"center",
+				navigationVAlign:"bottom",
+				navigationHOffset:0,
+				navigationVOffset:20,
+
+				soloArrowLeftHalign:"left",
+				soloArrowLeftValign:"center",
+				soloArrowLeftHOffset:20,
+				soloArrowLeftVOffset:0,
+
+				soloArrowRightHalign:"right",
+				soloArrowRightValign:"center",
+				soloArrowRightHOffset:20,
+				soloArrowRightVOffset:0,
+
+				shadow:0,
+				fullWidth:"on",
+				fullScreen:"off",
+
+				spinner:"spinner4",
+
+				stopLoop:"off",
+				stopAfterLoops:-1,
+				stopAtSlide:-1,
+
+				shuffle:"off",
+
+				autoHeight:"off",
+				forceFullWidth:"off",
+				hideTimerBar:"on",
+
+
+				hideThumbsOnMobile:"off",
+				hideNavDelayOnMobile:1500,
+				hideBulletsOnMobile:"off",
+				hideArrowsOnMobile:"off",
+				hideThumbsUnderResolution:0,
+
+				hideSliderAtLimit:0,
+				hideCaptionAtLimit:0,
+				hideAllCaptionAtLilmit:0,
+				startWithSlide:0,
+			});
+
+			apiRevoSlider.bind("revolution.slide.onloaded",function (e) {
+				setTimeout( function(){ SEMICOLON.slider.sliderParallaxDimensions(); }, 200 );
+			});
+
+			apiRevoSlider.bind("revolution.slide.onchange",function (e,data) {
+				SEMICOLON.slider.revolutionSliderMenu();
+			});
+
+		});
+
+	</script>
 
 </body>
 </html>
