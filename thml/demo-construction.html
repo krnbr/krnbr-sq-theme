@@ -10,6 +10,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
 
 	<!-- Construction Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="demos/construction/construction.css" type="text/css" />
@@ -29,11 +30,6 @@
 	<![endif]-->
 
 	<link rel="stylesheet" href="demos/construction/css/colors.css" type="text/css" />
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Document Title
 	============================================= -->
@@ -137,7 +133,7 @@
 
 				<!-- Primary Navigation
 				============================================= -->
-				<nav id="primary-menu" class="style-2 center">
+				<nav id="primary-menu" class="with-arrows style-2 center">
 
 					<div class="container clearfix">
 
@@ -169,12 +165,6 @@
 							<li><a href="#"><div>Contact</div></a></li>
 						</ul>
 
-						<script>
-							jQuery(document).ready(function($){
-								$( '#primary-menu ul li:has(ul) > a > div' ).append( ' <i class="icon-angle-down norightmargin"></i>' );
-							});
-						</script>
-
 						<!-- Top Search
 						============================================= -->
 						<div id="top-search">
@@ -192,7 +182,7 @@
 
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-parallax swiper_wrapper clearfix" style="height: 550px;">
+		<section id="slider" class="slider-parallax swiper_wrapper clearfix" style="height: 550px;" data-loop="true">
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
@@ -231,77 +221,6 @@
 				<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
 				<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
 			</div>
-
-			<script>
-				jQuery(document).ready(function($){
-					var swiperSlider = new Swiper('.swiper-parent',{
-						paginationClickable: false,
-						slidesPerView: 1,
-						simulateTouch: false,
-						grabCursor: false,
-						loop: true,
-						onSwiperCreated: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeStart: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeEnd: function(swiper){
-							$('#slider').find('.swiper-slide').each(function(){
-								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
-							});
-							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
-								if($(this).find('video').length > 0) {
-									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
-								}
-							});
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
-
-							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						}
-					});
-
-					$('#slider-arrow-left').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipePrev();
-					});
-
-					$('#slider-arrow-right').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipeNext();
-					});
-				});
-			</script>
 
 		</section>
 
@@ -477,7 +396,7 @@
 					<h2 class="center nobottommargin ls1">Some of Our Esteemed Projects:</h2>
 				</div>
 
-				<div id="portfolio" class="portfolio-full clearfix">
+				<div id="portfolio" class="portfolio grid-container portfolio-full clearfix">
 
 					<article class="portfolio-item pf-media pf-icons">
 						<div class="portfolio-image">
@@ -585,21 +504,6 @@
 
 				</div>
 
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var $container = $('#portfolio');
-
-						$container.isotope();
-
-						$(window).resize(function() {
-							$container.isotope('layout');
-						});
-
-					});
-
-				</script>
 
 				<a href="portfolio.html" class="button button-3d nobottomborder button-full center tright bottommargin-lg t300 font-primary" style="font-size: 26px;">
 					<div class="container clearfix">
@@ -715,7 +619,7 @@
 
 						<div class="widget quick-contact-widget clearfix">
 							<h4>Quick Quotation Form</h4>
-							<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+							<div class="quick-contact-form-result"></div>
 							<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
 								<div class="form-process"></div>
 								<input type="text" class="required sm-form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name" />
@@ -725,24 +629,6 @@
 								<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d nomargin" value="submit">Send Email</button>
 							</form>
 
-							<script type="text/javascript">
-
-								jQuery("#quick-contact-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.form-process').fadeIn();
-										jQuery(form).ajaxSubmit({
-											target: '#quick-contact-form-result',
-											success: function() {
-												jQuery(form).find('.form-process').fadeOut();
-												jQuery(form).find('.sm-form-control').val('');
-												jQuery('#quick-contact-form-result').attr('data-notify-msg', jQuery('#quick-contact-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#quick-contact-form-result'));
-											}
-										});
-									}
-								});
-
-							</script>
 						</div>
 
 					</div>
@@ -767,7 +653,7 @@
 					<div class="col_three_fifth col_last">
 						<h4>Recent News</h4>
 
-						<div id="oc-posts" class="owl-carousel posts-carousel">
+						<div id="oc-posts" class="owl-carousel posts-carousel carousel-widget" data-margin="20" data-nav="true" data-pagi="true" data-items-xxs="1" data-items-lg="2">
 
 							<div class="oc-item">
 								<div class="ipost clearfix">
@@ -833,30 +719,6 @@
 
 						</div>
 
-						<script type="text/javascript">
-
-							jQuery(document).ready(function($) {
-
-								var ocPosts = $("#oc-posts");
-
-								ocPosts.owlCarousel({
-									margin: 20,
-									nav: true,
-									navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
-									autoplay: false,
-									autoplayHoverPause: true,
-									dots: false,
-									responsive:{
-										0:{ items:1 },
-										600:{ items:2 },
-										1000:{ items:2 },
-										1200:{ items:2 }
-									}
-								});
-
-							});
-
-						</script>
 					</div>
 
 				</div>
@@ -1040,6 +902,11 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

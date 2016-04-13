@@ -21,11 +21,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
 	<!-- Document Title
 	============================================= -->
 	<title>Home - Portfolio Layout 3 | Canvas</title>
@@ -134,6 +129,7 @@
 										<ul>
 											<li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
 												<ul>
+													<li><a href="rs-demo-premium-concept.html"><div>Premium Templates</div></a></li>
 													<li><a href="slider-revolution.html"><div>Full Screen</div></a></li>
 													<li><a href="slider-revolution-fullwidth.html"><div>Full Width</div></a></li>
 													<li><a href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a></li>
@@ -227,6 +223,7 @@
 											<li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
 											<li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
 											<li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
+											<li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
 										</ul>
 									</li>
 									<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
@@ -238,6 +235,7 @@
 											<li><a href="side-panel-light.html"><div>Light Background</div></a></li>
 										</ul>
 									</li>
+									<li><a href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a></li>
 									<li><a href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
 										<ul>
 											<li><a href="header-light.html"><div>Menu - Style 1</div></a></li>
@@ -630,7 +628,7 @@
 
 				<!-- Portfolio Items
 				============================================= -->
-				<div id="portfolio" class="portfolio-3 portfolio-full portfolio-nomargin portfolio-notitle clearfix" >
+				<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-full portfolio-nomargin portfolio-notitle clearfix" >
 
 					<article class="portfolio-item pf-media pf-icons">
 						<div class="portfolio-image">
@@ -904,24 +902,6 @@
 
 				</div><!-- #portfolio end -->
 
-				<!-- Portfolio Script
-				============================================= -->
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var $container = $('#portfolio');
-
-						$container.isotope({ transitionDuration: '0.65s' });
-
-						$(window).resize(function() {
-							$container.isotope('layout');
-						});
-
-					});
-
-				</script><!-- Portfolio Script End -->
-
 				<a class="button button-full center button-light button-white">
 					<div class="container clearfix">
 						Need an Instant Quotation? <strong>Get in Touch</strong> <i class="icon-caret-right" style="top:4px;"></i>
@@ -959,9 +939,17 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<!-- Portfolio Script
+	============================================= -->
 
 </body>
 </html>

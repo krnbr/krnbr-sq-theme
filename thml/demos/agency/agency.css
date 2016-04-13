@@ -44,15 +44,10 @@
 
 	#primary-menu.style-2 { border-top: none; }
 
-	#primary-menu.style-2,
-	#primary-menu.style-2 > div > ul,
-	#primary-menu.style-2 > div > ul > li > a { height: 78px; }
-
-	#primary-menu.style-2 > div > ul > li > a { line-height: 78px; }
-
-	#primary-menu.style-2 > div > ul > li > a i { line-height: 77px; }
-	#primary-menu.style-2 ul ul,
-	#primary-menu.style-2 ul li .mega-menu-content { top: 78px; }
+	#primary-menu.style-2 > div > ul > li > a {
+		padding-top: 28px;
+		padding-bottom: 28px;
+	}
 
 	#primary-menu.style-2 ul li .mega-menu-content { left: -15px; }
 
@@ -106,3 +101,4 @@
 	background-color: transparent;
 	padding: 50px 0;
 }
+

@@ -22,13 +22,6 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-<script>!function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){function n(e){return u.raw?e:encodeURIComponent(e)}function o(e){return u.raw?e:decodeURIComponent(e)}function i(e){return n(u.json?JSON.stringify(e):String(e))}function t(e){0===e.indexOf('"')&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return e=decodeURIComponent(e.replace(c," ")),u.json?JSON.parse(e):e}catch(n){}}function r(n,o){var i=u.raw?n:t(n);return e.isFunction(o)?o(i):i}var c=/\+/g,u=e.cookie=function(t,c,s){if(arguments.length>1&&!e.isFunction(c)){if(s=e.extend({},u.defaults,s),"number"==typeof s.expires){var a=s.expires,d=s.expires=new Date;d.setMilliseconds(d.getMilliseconds()+864e5*a)}return document.cookie=[n(t),"=",i(c),s.expires?"; expires="+s.expires.toUTCString():"",s.path?"; path="+s.path:"",s.domain?"; domain="+s.domain:"",s.secure?"; secure":""].join("")}for(var f=t?void 0:{},p=document.cookie?document.cookie.split("; "):[],l=0,m=p.length;m>l;l++){var x=p[l].split("="),g=o(x.shift()),j=x.join("=");if(t===g){f=r(j,c);break}t||void 0===(j=r(j))||(f[g]=j)}return f};u.defaults={},e.removeCookie=function(n,o){return e.cookie(n,"",e.extend({},o,{expires:-1})),!e.cookie(n)}});</script>
-
 	<!-- Document Title
 	============================================= -->
 	<title>Page | Canvas</title>
@@ -153,6 +146,7 @@
 										<ul>
 											<li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
 												<ul>
+													<li><a href="rs-demo-premium-concept.html"><div>Premium Templates</div></a></li>
 													<li><a href="slider-revolution.html"><div>Full Screen</div></a></li>
 													<li><a href="slider-revolution-fullwidth.html"><div>Full Width</div></a></li>
 													<li><a href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a></li>
@@ -246,6 +240,7 @@
 											<li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
 											<li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
 											<li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
+											<li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
 										</ul>
 									</li>
 									<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
@@ -257,6 +252,7 @@
 											<li><a href="side-panel-light.html"><div>Light Background</div></a></li>
 										</ul>
 									</li>
+									<li><a href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a></li>
 									<li><a href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
 										<ul>
 											<li><a href="header-light.html"><div>Menu - Style 1</div></a></li>
@@ -362,8 +358,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Pages</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
 											<ul>
 												<li><a href="about.html"><div>About Us</div></a></li>
@@ -377,7 +373,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Utility</div></a>
 											<ul>
 												<li><a href="services.html"><div>Services - Layout 1</div></a></li>
@@ -391,7 +387,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Layout Grids</div></a>
 											<ul>
 												<li><a href="full-width.html"><div>Full Width</div></a></li>
@@ -405,7 +401,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Miscellaneous</div></a>
 											<ul>
 												<li><a href="login-register.html"><div>Login/Register</div></a></li>
@@ -422,8 +418,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
-								<div class="mega-menu-content style-2 col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Grids</div></a>
 											<ul>
 												<li><a href="portfolio-1.html"><div>1 Column</div></a></li>
@@ -435,7 +431,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="portfolio-mixed-masonry.html"><div>Mixed Columns</div></a></li>
@@ -447,7 +443,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Loading Styles</div></a>
 											<ul>
 												<li><a href="portfolio.html"><div>jQuery Filter</div></a></li>
@@ -459,7 +455,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Single Project</div></a>
 											<ul>
 												<li><a href="portfolio-single-extended.html"><div>Extended Item</div></a></li>
@@ -471,7 +467,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Layouts</div></a>
 											<ul>
 												<li><a href="portfolio-nomargin.html"><div>Default</div></a></li>
@@ -486,8 +482,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Blog</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Default</div></a>
 											<ul>
 												<li><a href="blog.html"><div>Right Sidebar</div></a></li>
@@ -504,7 +500,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="blog-masonry.html"><div>4 Columns</div></a></li>
@@ -521,7 +517,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Small Thumbs</div></a>
 											<ul>
 												<li><a href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
@@ -538,7 +534,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Single</div></a>
 											<ul>
 												<li><a href="blog-single.html"><div>Default Layout</div></a></li>
@@ -596,8 +592,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
-								<div class="mega-menu-content col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content clearfix">
+									<ul class="mega-menu-column col-5">
 										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
 										<li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
 										<li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
@@ -605,8 +601,10 @@
 										<li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
 										<li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
 										<li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
+										<li><a href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a></li>
+										<li><a href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
 										<li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
 										<li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
@@ -614,8 +612,10 @@
 										<li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
 										<li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
 										<li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
+										<li><a href="component-editable.html"><div><i class="icon-edit"></i>Editable Fields</div></a></li>
+										<li><a href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="lists-panels.html"><div><i class="icon-th-list"></i>Lists &amp; Panels</div></a></li>
 										<li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
 										<li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
@@ -623,8 +623,10 @@
 										<li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
 										<li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
 										<li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
+										<li><a href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a></li>
+										<li><a href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
 										<li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
 										<li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
@@ -632,8 +634,10 @@
 										<li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
 										<li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
 										<li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
+										<li><a href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a></li>
+										<li><a href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
 										<li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
 										<li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
@@ -641,6 +645,8 @@
 										<li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
 										<li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
 										<li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
+										<li><a href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a></li>
+										<li><a href="component-typeahead.html"><div><i class="icon-type"></i>Input Typeahead</div></a></li>
 									</ul>
 								</div>
 							</li>
@@ -711,41 +717,6 @@
 				</div>
 				<div id="page-title-gmap" class="gmap-bg gmap hidden-xs" style="position: absolute; top: 0; left: auto; right: 0; width: 200px; height: 100%;"></div>
 			</div>
-
-			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-			<script type="text/javascript" src="js/jquery.gmap.js"></script>
-
-			<script type="text/javascript">
-
-				$('#page-title-gmap').gMap({
-
-					address: 'Melbourne, Australia',
-					maptype: 'ROADMAP',
-					zoom: 14,
-					markers: [
-						{
-							address: "Melbourne, Australia",
-							html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>Envato</span></h4><p class="nobottommargin">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day, and a network of educational blogs where millions learn <strong>creative skills</strong>.</p></div>',
-							icon: {
-								image: "images/icons/map-icon-red.png",
-								iconsize: [32, 39],
-								iconanchor: [13,39]
-							}
-						}
-					],
-					doubleclickzoom: false,
-					controls: {
-						panControl: false,
-						zoomControl: false,
-						mapTypeControl: false,
-						scaleControl: false,
-						streetViewControl: false,
-						overviewMapControl: false
-					}
-
-				});
-
-			</script>
 
 		</section><!-- #page-title end -->
 
@@ -887,7 +858,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -897,22 +868,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								$("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										$(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										$(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												$(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												$('#widget-subscribe-form').find('.form-control').val('');
-												$('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -1022,25 +977,61 @@
 		</div>
 	</div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<script>!function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){function n(e){return u.raw?e:encodeURIComponent(e)}function o(e){return u.raw?e:decodeURIComponent(e)}function i(e){return n(u.json?JSON.stringify(e):String(e))}function t(e){0===e.indexOf('"')&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return e=decodeURIComponent(e.replace(c," ")),u.json?JSON.parse(e):e}catch(n){}}function r(n,o){var i=u.raw?n:t(n);return e.isFunction(o)?o(i):i}var c=/\+/g,u=e.cookie=function(t,c,s){if(arguments.length>1&&!e.isFunction(c)){if(s=e.extend({},u.defaults,s),"number"==typeof s.expires){var a=s.expires,d=s.expires=new Date;d.setMilliseconds(d.getMilliseconds()+864e5*a)}return document.cookie=[n(t),"=",i(c),s.expires?"; expires="+s.expires.toUTCString():"",s.path?"; path="+s.path:"",s.domain?"; domain="+s.domain:"",s.secure?"; secure":""].join("")}for(var f=t?void 0:{},p=document.cookie?document.cookie.split("; "):[],l=0,m=p.length;m>l;l++){var x=p[l].split("="),g=o(x.shift()),j=x.join("=");if(t===g){f=r(j,c);break}t||void 0===(j=r(j))||(f[g]=j)}return f};u.defaults={},e.removeCookie=function(n,o){return e.cookie(n,"",e.extend({},o,{expires:-1})),!e.cookie(n)}});</script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
 
-<script>
-	jQuery(document).ready( function($){
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+	<script type="text/javascript" src="js/jquery.gmap.js"></script>
 
-		if( $.cookie('websiteUsesCookies') == 'yesConfirmed' ) {
-			$('#cookie-notification').css({ bottom: -60 });
-		}
+	<script type="text/javascript">
 
-		$('.cookie-accept').click( function(){
-			$('#cookie-notification').animate({ bottom: -60 }, 400);
-			$.cookie('websiteUsesCookies', 'yesConfirmed', { expires: 30 });
-			return false;
+		$('#page-title-gmap').gMap({
+			address: 'Melbourne, Australia',
+			maptype: 'ROADMAP',
+			zoom: 14,
+			markers: [
+				{
+					address: "Melbourne, Australia",
+					html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>Envato</span></h4><p class="nobottommargin">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day, and a network of educational blogs where millions learn <strong>creative skills</strong>.</p></div>',
+					icon: {
+						image: "images/icons/map-icon-red.png",
+						iconsize: [32, 39],
+						iconanchor: [13,39]
+					}
+				}
+			],
+			doubleclickzoom: false,
+			controls: {
+				panControl: false,
+				zoomControl: false,
+				mapTypeControl: false,
+				scaleControl: false,
+				streetViewControl: false,
+				overviewMapControl: false
+			}
 		});
 
-	});
-</script>
+		jQuery(document).ready( function($){
+			if( $.cookie('websiteUsesCookies') == 'yesConfirmed' ) {
+				$('#cookie-notification').css({ bottom: -60 });
+			}
+
+			$('.cookie-accept').click( function(){
+				$('#cookie-notification').animate({ bottom: -60 }, 400);
+				$.cookie('websiteUsesCookies', 'yesConfirmed', { expires: 30 });
+				return false;
+			});
+		});
+
+	</script>
 
 </body>
 </html>

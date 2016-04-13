@@ -23,7 +23,8 @@
 		text-transform: uppercase;
 	}
 	p {
-		font-size: 14px;
+		line-height: 1.7;
+		&:not(.lead) { font-size: 14px; }
 	}
 }
 
@@ -286,24 +287,21 @@ body {
 			color: #999;
 		}
 	}
-}
+	.twitter-feed:not(.twitter-feed-avatar) a.twitter-avatar { display: none; }
 
-/* Small Post
------------------------------------------------------------------*/
+	.twitter-feed.twitter-feed-avatar i.icon-twitter { display: none; }
 
-.widget-twitter-feed {
-	li {
-		margin: 15px 0 0 0;
-		&:first-child {
-			margin-top: 0;
-		}
-	}
-	small {
+	.twitter-feed-avatar { margin-left: 44px; }
+
+	.twitter-feed-avatar > li a.twitter-avatar {
 		display: block;
-		margin-top: 3px;
-		a {
-			color: #999;
-		}
+		position: absolute;
+		left: -44px;
+		text-align: center;
+		top: 2px;
+		width: 32px;
+		height: 32px;
+		a.twitter-avatar img { border-radius: 50%; }
 	}
 }
 
@@ -367,5 +365,6 @@ body {
 		ul ul a { padding-left: 60px; }
 		ul ul ul a { padding-left: 80px; }
 	}
+	li.current > ul { display: block; }
 }
 

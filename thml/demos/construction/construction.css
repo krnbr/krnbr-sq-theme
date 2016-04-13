@@ -4,14 +4,11 @@
 	Some of the CSS Codes have been modified from the Original
 	style.css File to match the Styling of this Demo
 
-	Version: 1.0
+	Version: 4.0
 -----------------------------------------------------------------*/
 
 
-#top-bar {
-	z-index: 1;
-	background-color: #FFF;
-}
+#top-bar { background-color: #FFF; }
 
 .top-links li > a {
 	font-weight: 400;
@@ -59,9 +56,6 @@
 #header { background-color: #F9F9F9; }
 
 #header-wrap { background-color: #FFF; }
-
-
-#primary-menu.style-2 > div > ul > li > a i { line-height: 57px; }
 
 
 .device-sm #primary-menu i.icon-angle-down,
@@ -176,6 +170,4 @@
 .noheight { height: 0 !important; }
 
 .nolineheight { line-height: 0 !important; }
-
-
 

@@ -21,17 +21,10 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
-	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="include/rs-plugin/css/navigation.css">
 
 	<!-- Document Title
 	============================================= -->
@@ -63,6 +56,9 @@
 			letter-spacing: 3px;
 			font-family: 'Raleway', sans-serif;
 		}
+		.tp-video-play-button { display: none !important; }
+
+		.tp-caption { white-space: nowrap; }
 
 	</style>
 
@@ -74,7 +70,7 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-		<section id="slider" class="slider-parallax revslider-wrap clearfix">
+		<section id="slider" class="slider-parallax revslider-wrap full-screen clearfix">
 
 			<!--
 			#################################
@@ -84,289 +80,199 @@
 			<div class="tp-banner-container">
 				<div class="tp-banner" >
 					<ul>    <!-- SLIDE  -->
-				<li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/2.jpg" data-delay="12000"  data-saveperformance="off" data-title="Delicious Recipes">
-					<!-- MAIN IMAGE -->
-					<img src="images/restaurant/slider/2.jpg"  alt="kenburns1"  data-bgposition="left center" data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
-					<!-- LAYERS -->
+						<li class="dark" data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/2.jpg" data-delay="12000"  data-saveperformance="off" data-title="Delicious Recipes">
+							<!-- MAIN IMAGE -->
+							<img src="images/restaurant/slider/2.jpg"  alt="kenburns1"  data-bgposition="left center" data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right center">
+							<!-- LAYERS -->
 
-					<!-- LAYER NR. 2 -->
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="600"
-					data-y="215"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;">Finger Lickin' Good</div>
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+							data-x="600"
+							data-y="215"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1000"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;">Finger Lickin' Good</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="597"
-					data-y="230"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; font-size: 60px;">Delicious Recipes</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+							data-x="597"
+							data-y="230"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1200"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; font-size: 60px;">Delicious Recipes</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
-					data-x="600"
-					data-y="340"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 550px; white-space: normal;">Welcome to the Home of Fabulously Tasty homemade food that's gonna make you forget your mom.!</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
+							data-x="600"
+							data-y="340"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1400"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 550px; white-space: normal;">Welcome to the Home of Fabulously Tasty homemade food that's gonna make you forget your mom.!</div>
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="600"
-					data-y="450"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-white button-light button-border button-large button-rounded tright nomargin"><span>Browse Menu</span> <i class="icon-angle-right"></i></a></div>
+							<div class="tp-caption customin ltl tp-resizeme"
+							data-x="600"
+							data-y="450"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1550"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-white button-light button-border button-large button-rounded tright nomargin"><span>Browse Menu</span> <i class="icon-angle-right"></i></a></div>
 
-				</li>
-				<!-- SLIDE  -->
-				<li data-transition="slidedown" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/1.jpg" data-delay="10000"  data-saveperformance="off"  data-title="Book your Tables">
-					<!-- MAIN IMAGE -->
-					<img src="images/restaurant/slider/1.jpg"  alt="kenburns6"  data-bgposition="center top" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="120" data-bgfitend="100" data-bgpositionend="center center">
-					<!-- LAYERS -->
+						</li>
+						<!-- SLIDE  -->
+						<li data-transition="slidedown" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/1.jpg" data-delay="10000"  data-saveperformance="off"  data-title="Book your Tables">
+							<!-- MAIN IMAGE -->
+							<img src="images/restaurant/slider/1.jpg"  alt="kenburns6"  data-bgposition="center top" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="120" data-scaleend="100" data-bgpositionend="center center">
+							<!-- LAYERS -->
 
-					<!-- LAYER NR. 2 -->
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="0"
-					data-y="215"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #222;">Easy Seat Reservations</div>
+							<!-- LAYER NR. 2 -->
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+							data-x="0"
+							data-y="215"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1000"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; color: #222;">Easy Seat Reservations</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="-3"
-					data-y="230"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #222; font-size: 60px;">Book your Tables</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+							data-x="-3"
+							data-y="230"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1200"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; color: #222; font-size: 60px;">Book your Tables</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
-					data-x="0"
-					data-y="340"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; color: #222; max-width: 550px; white-space: normal;">Try our Mobile App to Reserve Tables in our Restaurant to avoid the Queue.</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text tleft"
+							data-x="0"
+							data-y="340"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1400"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; color: #222; max-width: 550px; white-space: normal;">Try our Mobile App to Reserve Tables in our Restaurant to avoid the Queue.</div>
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="0"
-					data-y="450"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-3d button-black button-large button-rounded tright nomargin" style="color: #FFF;"><span>Reserve Now</span> <i class="icon-angle-right"></i></a></div>
+							<div class="tp-caption customin ltl tp-resizeme"
+							data-x="0"
+							data-y="450"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1550"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-3d button-black button-large button-rounded tright nomargin" style="color: #FFF;"><span>Reserve Now</span> <i class="icon-angle-right"></i></a></div>
 
-				</li>
-				<!-- SLIDE  -->
-				<li class="dark" data-transition="slideleft" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/3.jpg" data-delay="12000"  data-saveperformance="off"  data-title="Full Featured Menu">
-					<!-- MAIN IMAGE -->
-					<img src="images/restaurant/slider/3.jpg"  alt="kenburns3"  data-bgposition="left top" data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right bottom">
-					<!-- LAYERS -->
+						</li>
+						<!-- SLIDE  -->
+						<li class="dark" data-transition="slideleft" data-slotamount="1" data-masterspeed="1500" data-thumb="images/restaurant/slider/thumb/3.jpg" data-delay="12000"  data-saveperformance="off"  data-title="Full Featured Menu">
+							<!-- MAIN IMAGE -->
+							<img src="images/restaurant/slider/3.jpg"  alt="kenburns3"  data-bgposition="left top" data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="130" data-scaleend="100" data-bgpositionend="right bottom">
+							<!-- LAYERS -->
 
-					<!-- LAYER NR. 1 -->
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
-					data-x="440"
-					data-y="215"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1000"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;">Wide Array of Options</div>
+							<!-- LAYER NR. 1 -->
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-caps-text uppercase"
+							data-x="440"
+							data-y="215"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1000"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;">Wide Array of Options</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
-					data-x="287"
-					data-y="230"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1200"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;">Full Featured Menus</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+							data-x="287"
+							data-y="230"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1200"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;">Full Featured Menus</div>
 
-					<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text"
-					data-x="245"
-					data-y="340"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1400"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 650px; white-space: normal;">Choose from Continental, Oriental, Italian or Thai Cuisines. Or Simply create your own Mix.</div>
+							<div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text"
+							data-x="245"
+							data-y="340"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1400"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 650px; white-space: normal;">Choose from Continental, Oriental, Italian or Thai Cuisines. Or Simply create your own Mix.</div>
 
-					<div class="tp-caption customin ltl tp-resizeme"
-					data-x="496"
-					data-y="450"
-					data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-					data-speed="800"
-					data-start="1550"
-					data-easing="easeOutQuad"
-					data-splitin="none"
-					data-splitout="none"
-					data-elementdelay="0.01"
-					data-endelementdelay="0.1"
-					data-endspeed="1000"
-					data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Start Now</span> <i class="icon-angle-right"></i></a></div>
-				</li>
-			</ul>
+							<div class="tp-caption customin ltl tp-resizeme"
+							data-x="496"
+							data-y="450"
+							data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+							data-speed="800"
+							data-start="1550"
+							data-easing="easeOutQuad"
+							data-splitin="none"
+							data-splitout="none"
+							data-elementdelay="0.01"
+							data-endelementdelay="0.1"
+							data-endspeed="1000"
+							data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Start Now</span> <i class="icon-angle-right"></i></a></div>
+						</li>
+					</ul>
+				</div>
 			</div>
-			</div>
-
-			<script type="text/javascript">
-
-				jQuery(document).ready(function() {
-
-
-
-					jQuery('.tp-banner').show().revolution(
-					{
-						dottedOverlay:"none",
-						delay:16000,
-						startwidth:1140,
-						startheight:700,
-						hideThumbs:200,
-
-						thumbWidth:100,
-						thumbHeight:50,
-						thumbAmount:5,
-
-						navigationType:"bullet",
-						navigationArrows:"solo",
-						navigationStyle:"preview4",
-
-						touchenabled:"on",
-						onHoverStop:"on",
-
-						swipe_velocity: 0.7,
-						swipe_min_touches: 1,
-						swipe_max_touches: 1,
-						drag_block_vertical: false,
-
-												parallax:"mouse",
-						parallaxBgFreeze:"on",
-						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-
-						keyboardNavigation:"off",
-
-						navigationHAlign:"center",
-						navigationVAlign:"bottom",
-						navigationHOffset:0,
-						navigationVOffset:20,
-
-						soloArrowLeftHalign:"left",
-						soloArrowLeftValign:"center",
-						soloArrowLeftHOffset:20,
-						soloArrowLeftVOffset:0,
-
-						soloArrowRightHalign:"right",
-						soloArrowRightValign:"center",
-						soloArrowRightHOffset:20,
-						soloArrowRightVOffset:0,
-
-						shadow:0,
-						fullWidth:"off",
-						fullScreen:"on",
-
-						spinner:"spinner4",
-
-						stopLoop:"off",
-						stopAfterLoops:-1,
-						stopAtSlide:-1,
-
-						shuffle:"off",
-
-						autoHeight:"off",
-						forceFullWidth:"off",
-
-
-
-						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,
-						hideBulletsOnMobile:"off",
-						hideArrowsOnMobile:"off",
-						hideThumbsUnderResolution:0,
-
-						hideSliderAtLimit:0,
-						hideCaptionAtLimit:0,
-						hideAllCaptionAtLilmit:0,
-						startWithSlide:0,
-						fullScreenOffsetContainer: ".header"
-					});
-
-
-
-
-				}); //ready
-
-			</script>
-
-			<!-- END REVOLUTION SLIDER -->
 
 		</section>
 
@@ -476,6 +382,8 @@
 			</div>
 
 		</header><!-- #header end -->
+
+		<div class="clear"></div>
 
 		<!-- Content
 		============================================= -->
@@ -829,9 +737,146 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+	<script type="text/javascript">
+
+		var tpj=jQuery;
+		tpj.noConflict();
+
+		tpj(document).ready(function() {
+
+			var apiRevoSlider = tpj('.tp-banner').show().revolution(
+			{
+				sliderType:"standard",
+				jsFileLocation:"include/rs-plugin/js/",
+				dottedOverlay:"none",
+				delay:16000,
+				startwidth:1140,
+				startheight:600,
+				hideThumbs:200,
+
+				thumbWidth:100,
+				thumbHeight:50,
+				thumbAmount:5,
+
+				navigation: {
+                    keyboardNavigation: "on",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    thumbnails: {
+                        style: "hesperiden",
+                        enable: true,
+                        width: 100,
+                        height: 50,
+                        min_width: 100,
+                        wrapper_padding: 5,
+                        wrapper_color: "#ffffff",
+                        wrapper_opacity: "0.5",
+                        tmp: '<span class="tp-thumb-image"></span><span class="tp-thumb-title">{{title}}</span>',
+                        visibleAmount: 5,
+                        hide_onmobile: false,
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        span: false,
+                        position: "inner",
+                        space: 5,
+                        h_align: "right",
+                        v_align: "bottom",
+                        h_offset: 20,
+                        v_offset: 50
+                    }
+                },
+
+				touchenabled:"on",
+				onHoverStop:"on",
+
+				swipe_velocity: 0.7,
+				swipe_min_touches: 1,
+				swipe_max_touches: 1,
+				drag_block_vertical: false,
+
+										parallax:"mouse",
+				parallaxBgFreeze:"on",
+				parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+				keyboardNavigation:"off",
+
+				navigationHAlign:"center",
+				navigationVAlign:"bottom",
+				navigationHOffset:0,
+				navigationVOffset:20,
+
+				soloArrowLeftHalign:"left",
+				soloArrowLeftValign:"center",
+				soloArrowLeftHOffset:20,
+				soloArrowLeftVOffset:0,
+
+				soloArrowRightHalign:"right",
+				soloArrowRightValign:"center",
+				soloArrowRightHOffset:20,
+				soloArrowRightVOffset:0,
+
+				shadow:0,
+				fullWidth:"off",
+				fullScreen:"on",
+
+				spinner:"spinner4",
+
+				stopLoop:"off",
+				stopAfterLoops:-1,
+				stopAtSlide:-1,
+
+				shuffle:"off",
+
+				autoHeight:"off",
+				forceFullWidth:"off",
+
+
+
+				hideThumbsOnMobile:"off",
+				hideNavDelayOnMobile:1500,
+				hideBulletsOnMobile:"off",
+				hideArrowsOnMobile:"off",
+				hideThumbsUnderResolution:0,
+
+				hideSliderAtLimit:0,
+				hideCaptionAtLimit:0,
+				hideAllCaptionAtLilmit:0,
+				startWithSlide:0,
+			});
+
+		});
+
+	</script><!-- END REVOLUTION SLIDER -->
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* ----------------------------------------------------------------
     Canvas: Media Agency Demo
-    Version: 1.0
+    Version: 1.0.1
 -----------------------------------------------------------------*/
 
 
@@ -13,6 +13,7 @@
 
 .device-md #wrapper { width: 80%; }
 
+.device-sm #wrapper,
 .device-xs #wrapper,
 .device-xxs #wrapper { width: 100%; }
 
@@ -133,9 +134,13 @@
 /* Portfolio Items
 ---------------------------------------------------------------------------- */
 
-#portfolio.portfolio-full.portfolio-3 { margin: 0 -10px !important; }
+.portfolio-full.portfolio-3 { margin: 0 -20px -20px 0 !important; }
 
-.portfolio-full.portfolio-3 .portfolio-item { padding: 10px; }
+.portfolio-full.portfolio-3 .portfolio-item { padding: 0 20px 20px 0 !important; }
+
+.device-xxs .portfolio-full.portfolio-3 { margin: 0 0 -20px 0 !important; }
+
+.device-xxs .portfolio-full.portfolio-3 .portfolio-item { padding: 0 0 20px 0 !important; }
 
 
 .i-overlay { background: rgba(255,255,255,0.8); }

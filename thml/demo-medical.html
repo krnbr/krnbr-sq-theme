@@ -10,6 +10,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Montserrat:400,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
 
 	<!-- Medical Demo Specific Stylesheet -->
 	<link rel="stylesheet" href="demos/medical/medical.css" type="text/css" />
@@ -30,11 +31,6 @@
 	<![endif]-->
 
 	<link rel="stylesheet" href="css/colors.php?color=DE6262" type="text/css" />
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Document Title
 	============================================= -->
@@ -136,7 +132,7 @@
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="swiper_wrapper full-screen clearfix">
+		<section id="slider" class="swiper_wrapper full-screen clearfix" data-loop="true" data-autoplay="5000">
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
@@ -157,56 +153,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<script>
-				jQuery(document).ready(function($){
-					var swiperSlider = new Swiper('.swiper-parent',{
-						paginationClickable: false,
-						slidesPerView: 1,
-						grabCursor: true,
-						autoplay: 5000,
-						loop: true,
-						onSwiperCreated: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						},
-						onSlideChangeStart: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
-							});
-						},
-						onSlideChangeEnd: function(swiper){
-							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						}
-					});
-				});
-			</script>
+			</div>
 
 		</section><!-- #slider end -->
 
@@ -283,58 +231,63 @@
 				</div>
 
 				<div class="section nopadding common-height dark topmargin-sm">
-					<div class="col-md-5" style="background: url('demos/medical/images/section-bg.jpg') center center no-repeat; background-size: cover;">
+					<div class="col-md-5" data-height-lg="597" data-height-md="614" data-height-sm="400" data-height-xs="300" data-height-xxs="200" style="background: url('demos/medical/images/section-bg.jpg') center center no-repeat; background-size: cover;">
 						<div>&nbsp;</div>
 					</div>
 					<div id="booking-appointment-form" class="col-md-7 nopadding">
 						<div class="bgcolor col-padding">
 							<h2>Book an Appointment.</h2>
-							<form class="nobottommargin" name="template-medical-appointment" action="demos/medical/appointment.php" method="post">
+							<div id="medical-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+							<form class="nobottommargin" id="template-medical-form" name="template-medical-form" action="demos/medical/include/appointment.php" method="post">
 								<div class="col_two_third">
-									<label for="">Name:</label>
-									<input type="text" class="form-control not-dark required" value="">
+									<label for="template-medical-name">Name:</label>
+									<input type="text" id="template-medical-name" name="template-medical-name" class="form-control not-dark required" value="">
 								</div>
 								<div class="col_one_third col_last">
-									<label for="">Phone:</label>
-									<input type="text" class="form-control not-dark required" value="">
+									<label for="template-medical-phone">Phone:</label>
+									<input type="text" id="template-medical-phone" name="template-medical-phone" class="form-control not-dark required" value="">
 								</div>
 								<div class="clear"></div>
 								<div class="col_two_third">
-									<label for="">Email Address:</label>
-									<input type="text" class="form-control not-dark required" value="">
+									<label for="template-medical-email">Email Address:</label>
+									<input type="email" id="template-medical-email" name="template-medical-email" class="form-control not-dark required" value="">
 								</div>
 								<div class="col_one_third col_last">
-									<label for="">Date of Birth:</label>
-									<input type="text" class="form-control not-dark required" value="">
+									<label for="template-medical-dob">Date of Birth:</label>
+									<input type="text" id="template-medical-dob" name="template-medical-dob" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY">
 								</div>
 								<div class="clear"></div>
 								<div class="col_two_fifth nobottommargin">
 									<div class="col_full">
-										<label for="">Appointment Date:</label>
-										<input type="text" class="form-control not-dark required" value="">
+										<label for="template-medical-appoint-date">Appointment Date:</label>
+										<input type="text" id="template-medical-appoint-date" name="template-medical-appoint-date" class="form-control not-dark required" value="" placeholder="DD/MM/YYYY">
 									</div>
 									<div class="col_full nobottommargin">
-										<label for="">Booked with us Before?</label><br>
+										<label for="template-medical-second-booking">Booked with us Before?</label><br>
 										<label class="rightmargin-sm">
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<input type="radio" id="template-medical-second-booking" name="template-medical-second-booking" value="yes">
 											Yes
 										</label>
 										<label>
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="template-medical-second-booking" value="no" checked>
 											No
 										</label>
 									</div>
 								</div>
 								<div class="col_three_fifth nobottommargin col_last">
-									<label for="">Message:</label>
-									<textarea name="template-medical-appointment-message" class="form-control not-dark required" cols="30" rows="5"></textarea>
+									<label for="template-medical-message">Message:</label>
+									<textarea id="template-medical-message" name="template-medical-message" class="form-control not-dark required" cols="30" rows="5"></textarea>
 								</div>
 								<div class="clear"></div>
+								<div class="col_full hidden">
+									<input type="text" name="template-medical-botcheck" value="" />
+								</div>
 								<div class="col_full topmargin-sm nobottommargin">
 									<button class="button button-rounded button-white button-light nomargin" type="submit" value="submit">Confirm Booking</button>
 								</div>
 								<div class="clear"></div>
 							</form>
+
 						</div>
 					</div>
 				</div>
@@ -458,7 +411,7 @@
 						<span>We make sure that your Life are in Good Hands.</span>
 					</div>
 
-					<div id="oc-team" class="owl-carousel team-carousel">
+					<div id="oc-team" class="owl-carousel team-carousel carousel-widget" data-margin="30" data-nav="true" data-pagi="true" data-items-xxs="1" data-items-xs="2" data-items-md="3" data-items-lg="4">
 
 						<div class="team">
 							<div class="team-image">
@@ -534,29 +487,6 @@
 
 					</div>
 
-					<script type="text/javascript">
-
-						jQuery(document).ready(function($) {
-
-							var ocTeam = $("#oc-team");
-
-							ocTeam.owlCarousel({
-								responsive: {
-									320:{ items:1 },
-									480:{ items:2 },
-									768:{ items:3 },
-									992:{ items:3 },
-									1200:{ items:4 }
-								},
-								margin: 30,
-								nav: true,
-								navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
-								dots: true
-							});
-
-						});
-
-					</script>
 				</div>
 
 			</div>
@@ -577,7 +507,7 @@
 
 						<div class="widget clearfix">
 
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin row clearfix">
 								<div class="col-md-9">
 									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="sm-form-control required email" placeholder="Enter your Email to Subscribe to our Newsletter">
@@ -586,23 +516,6 @@
 									<button class="button button-rounded nomargin center btn-block" type="submit">Subscribe</button>
 								</div>
 							</form>
-							<script type="text/javascript">
-								$("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										var defaultText = $(form).find('button').html();
-										$(form).find('button').html('<i class="icon-line-loader icon-spin"></i>');
-										$(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												$(form).find('button').html( defaultText );
-												$(form).find('.sm-form-control').val('');
-												$('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 
 							<div class="line line-sm"></div>
 
@@ -736,9 +649,36 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
+
+	<script type="text/javascript">
+
+		$("#template-medical-form").validate({
+			submitHandler: function(form) {
+				var formButton = $(form).find('button'),
+					formButtonText = formButton.html();
+
+				formButton.prop('disabled', true).html('<i class="icon-line-loader icon-spin norightmargin"></i>');
+				$(form).ajaxSubmit({
+					target: '#medical-form-result',
+					success: function() {
+						formButton.prop('disabled', false).html(formButtonText);
+						$(form).find('.form-control').val('');
+						$('#medical-form-result').attr('data-notify-msg', $('#medical-form-result').html()).html('');
+						SEMICOLON.widget.notifications($('#medical-form-result'));
+					}
+				});
+			}
+		});
+
+	</script>
 
 </body>
 </html>

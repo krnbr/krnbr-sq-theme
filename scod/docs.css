@@ -7,18 +7,17 @@
 
 #logo a { position: relative; }
 
-#logo a:after {
-	content: '3.0';
+#logo a:not(.noversion):after {
+	content: '4.0.1';
 	position: absolute;
 	top: 20px;
 	left: auto;
-	right: -20px;
+	right: -27px;
 	font-size: 11px;
 	line-height: 11px;
 	font-weight: 500;
 	color: #111;
 }
-
 
 
 /* ----------------------------------------------------------------
@@ -67,6 +66,12 @@
 
 .docs-navigation ul li:hover > a,
 .docs-navigation ul li.ui-tabs-active > a { font-weight: 700; }
+
+.docs-navigation ul li > a .label {
+	position: relative;
+	top: -1px;
+	margin-left: 5px;
+}
 
 .docs-navigation ul ul { display: none; }
 

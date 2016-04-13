@@ -10,6 +10,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
@@ -20,11 +21,6 @@
 	<!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Document Title
 	============================================= -->
@@ -134,6 +130,7 @@
 										<ul>
 											<li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
 												<ul>
+													<li><a href="rs-demo-premium-concept.html"><div>Premium Templates</div></a></li>
 													<li><a href="slider-revolution.html"><div>Full Screen</div></a></li>
 													<li><a href="slider-revolution-fullwidth.html"><div>Full Width</div></a></li>
 													<li><a href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a></li>
@@ -227,6 +224,7 @@
 											<li><a href="static-sticky.html"><div>Static Sticky</div></a></li>
 											<li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
 											<li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
+											<li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
 										</ul>
 									</li>
 									<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
@@ -238,6 +236,7 @@
 											<li><a href="side-panel-light.html"><div>Light Background</div></a></li>
 										</ul>
 									</li>
+									<li><a href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a></li>
 									<li><a href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
 										<ul>
 											<li><a href="header-light.html"><div>Menu - Style 1</div></a></li>
@@ -343,8 +342,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Pages</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
 											<ul>
 												<li><a href="about.html"><div>About Us</div></a></li>
@@ -358,7 +357,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Utility</div></a>
 											<ul>
 												<li><a href="services.html"><div>Services - Layout 1</div></a></li>
@@ -372,7 +371,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Layout Grids</div></a>
 											<ul>
 												<li><a href="full-width.html"><div>Full Width</div></a></li>
@@ -386,7 +385,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Miscellaneous</div></a>
 											<ul>
 												<li><a href="login-register.html"><div>Login/Register</div></a></li>
@@ -403,8 +402,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
-								<div class="mega-menu-content style-2 col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Grids</div></a>
 											<ul>
 												<li><a href="portfolio-1.html"><div>1 Column</div></a></li>
@@ -416,7 +415,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="portfolio-mixed-masonry.html"><div>Mixed Columns</div></a></li>
@@ -428,7 +427,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Loading Styles</div></a>
 											<ul>
 												<li><a href="portfolio.html"><div>jQuery Filter</div></a></li>
@@ -440,7 +439,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Single Project</div></a>
 											<ul>
 												<li><a href="portfolio-single-extended.html"><div>Extended Item</div></a></li>
@@ -452,7 +451,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li class="mega-menu-title"><a href="#"><div>Layouts</div></a>
 											<ul>
 												<li><a href="portfolio-nomargin.html"><div>Default</div></a></li>
@@ -467,8 +466,8 @@
 								</div>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Blog</div></a>
-								<div class="mega-menu-content style-2 col-4 clearfix">
-									<ul>
+								<div class="mega-menu-content style-2 clearfix">
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Default</div></a>
 											<ul>
 												<li><a href="blog.html"><div>Right Sidebar</div></a></li>
@@ -485,7 +484,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Masonry</div></a>
 											<ul>
 												<li><a href="blog-masonry.html"><div>4 Columns</div></a></li>
@@ -502,7 +501,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Small Thumbs</div></a>
 											<ul>
 												<li><a href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
@@ -519,7 +518,7 @@
 											</ul>
 										</li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-md-3">
 										<li class="mega-menu-title"><a href="#"><div>Single</div></a>
 											<ul>
 												<li><a href="blog-single.html"><div>Default Layout</div></a></li>
@@ -577,8 +576,8 @@
 								</ul>
 							</li>
 							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
-								<div class="mega-menu-content col-5 clearfix">
-									<ul>
+								<div class="mega-menu-content clearfix">
+									<ul class="mega-menu-column col-5">
 										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
 										<li><a href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a></li>
 										<li><a href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a></li>
@@ -586,8 +585,10 @@
 										<li><a href="clients.html"><div><i class="icon-apple"></i>Clients</div></a></li>
 										<li><a href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a></li>
 										<li><a href="counters.html"><div><i class="icon-time"></i>Counters</div></a></li>
+										<li><a href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a></li>
+										<li><a href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a></li>
 										<li><a href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a></li>
 										<li><a href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a></li>
@@ -595,8 +596,10 @@
 										<li><a href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a></li>
 										<li><a href="labels-badges.html"><div><i class="icon-plus-sign"></i>Labels</div></a></li>
 										<li><a href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a></li>
+										<li><a href="component-editable.html"><div><i class="icon-edit"></i>Editable Fields</div></a></li>
+										<li><a href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="lists-panels.html"><div><i class="icon-th-list"></i>Lists &amp; Panels</div></a></li>
 										<li><a href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a></li>
 										<li><a href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a></li>
@@ -604,8 +607,10 @@
 										<li><a href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a></li>
 										<li><a href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a></li>
 										<li><a href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a></li>
+										<li><a href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a></li>
+										<li><a href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a></li>
 										<li><a href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a></li>
 										<li><a href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a></li>
@@ -613,8 +618,10 @@
 										<li><a href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a></li>
 										<li><a href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a></li>
 										<li><a href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a></li>
+										<li><a href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a></li>
+										<li><a href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a></li>
 									</ul>
-									<ul>
+									<ul class="mega-menu-column col-5">
 										<li><a href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a></li>
 										<li><a href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a></li>
 										<li><a href="tables.html"><div><i class="icon-table"></i>Tables</div></a></li>
@@ -622,6 +629,8 @@
 										<li><a href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a></li>
 										<li><a href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a></li>
 										<li><a href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a></li>
+										<li><a href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a></li>
+										<li><a href="component-typeahead.html"><div><i class="icon-type"></i>Input Typeahead</div></a></li>
 									</ul>
 								</div>
 							</li>
@@ -682,122 +691,49 @@
 		</header><!-- #header end -->
 
 		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+			<div class="slider-parallax-inner">
 
-			<div class="swiper-container swiper-parent">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
-						<div class="container clearfix">
-							<div class="slider-caption slider-caption-center">
-								<h2 data-caption-animate="fadeInUp">Welcome to Canvas</h2>
-								<p data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
+							<div class="container clearfix">
+								<div class="slider-caption slider-caption-center">
+									<h2 data-caption-animate="fadeInUp">Welcome to Canvas</h2>
+									<p data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide dark">
+							<div class="container clearfix">
+								<div class="slider-caption slider-caption-center">
+									<h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
+									<p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+								</div>
+							</div>
+							<div class="video-wrap">
+								<video id="slide-video" poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
+									<source src='images/videos/explore.webm' type='video/webm' />
+									<source src='images/videos/explore.mp4' type='video/mp4' />
+								</video>
+								<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+							</div>
+						</div>
+						<div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
+							<div class="container clearfix">
+								<div class="slider-caption">
+									<h2 data-caption-animate="fadeInUp">Great Performance</h2>
+									<p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide dark">
-						<div class="container clearfix">
-							<div class="slider-caption slider-caption-center">
-								<h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
-								<p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
-							</div>
-						</div>
-						<div class="video-wrap">
-							<video id="slide-video" poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
-								<source src='images/videos/explore.webm' type='video/webm' />
-								<source src='images/videos/explore.mp4' type='video/mp4' />
-							</video>
-							<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
-						</div>
-					</div>
-					<div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
-						<div class="container clearfix">
-							<div class="slider-caption">
-								<h2 data-caption-animate="fadeInUp">Great Performance</h2>
-								<p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-							</div>
-						</div>
-					</div>
+					<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+					<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
 				</div>
-				<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-				<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+
+				<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
 			</div>
-
-			<script>
-				jQuery(document).ready(function($){
-					var swiperSlider = new Swiper('.swiper-parent',{
-						paginationClickable: false,
-						slidesPerView: 1,
-						grabCursor: true,
-						loop: true,
-						onSwiperCreated: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeStart: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeEnd: function(swiper){
-							$('#slider').find('.swiper-slide').each(function(){
-								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
-								if($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
-							});
-							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
-								if($(this).find('video').length > 0) {
-									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
-								}
-								if($(this).find('.yt-bg-player').length > 0) {
-									$(this).find('.yt-bg-player').getPlayer().seekTo( $(this).find('.yt-bg-player').attr('data-start') );
-								}
-							});
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
-
-							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						}
-					});
-
-					$('#slider-arrow-left').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipePrev();
-					});
-
-					$('#slider-arrow-right').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipeNext();
-					});
-				});
-			</script>
-
-			<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
 		</section>
 
 		<!-- Content
@@ -1107,7 +1043,7 @@
 					</div>
 				</div>
 
-				<div id="portfolio" class="portfolio-nomargin portfolio-notitle portfolio-full clearfix">
+				<div id="portfolio" class="portfolio portfolio-nomargin grid-container portfolio-notitle portfolio-full grid-container clearfix">
 
 					<article class="portfolio-item pf-media pf-icons">
 						<div class="portfolio-image">
@@ -1243,34 +1179,6 @@
 
 				</div>
 
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var $container = $('#portfolio');
-
-						$container.isotope({
-							transitionDuration: '0.65s',
-							masonry: {
-								columnWidth: $container.find('.portfolio-item:not(.wide)')[0]
-							}
-						});
-
-						$('#page-menu a').click(function(){
-							$('#page-menu li').removeClass('current');
-							$(this).parent('li').addClass('current');
-							var selector = $(this).attr('data-filter');
-							$container.isotope({ filter: selector });
-							return false;
-						});
-
-						$(window).resize(function() {
-							$container.isotope('layout');
-						});
-
-					});
-
-				</script>
 
 				<div class="clear"></div>
 
@@ -1555,7 +1463,7 @@
 
 				<div class="container clearfix">
 
-					<div id="oc-clients" class="owl-carousel image-carousel">
+					<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
 
 						<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
 						<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
@@ -1570,31 +1478,6 @@
 
 					</div>
 
-					<script type="text/javascript">
-
-						jQuery(document).ready(function($) {
-
-							var ocClients = $("#oc-clients");
-
-							ocClients.owlCarousel({
-								margin: 60,
-								loop: true,
-								nav: false,
-								autoplay: true,
-								dots: false,
-								autoplayHoverPause: true,
-								responsive:{
-									0:{ items:2 },
-									480:{ items:3 },
-									768:{ items:4 },
-									992:{ items:5 },
-									1200:{ items:6 }
-								}
-							});
-
-						});
-
-					</script>
 
 				</div>
 
@@ -1724,7 +1607,7 @@
 
 						<div class="widget subscribe-widget clearfix">
 							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<div class="widget-subscribe-form-result"></div>
 							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
@@ -1734,22 +1617,6 @@
 									</span>
 								</div>
 							</form>
-							<script type="text/javascript">
-								jQuery("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form').find('.form-control').val('');
-												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
@@ -1851,6 +1718,11 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
