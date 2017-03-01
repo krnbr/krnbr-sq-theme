@@ -4,7 +4,234 @@
 	Add all your Custom Styled CSS here for New Styles or
 	Overwriting Default Theme Styles for Better Hanlding Updates
 -----------------------------------------------------------------*/
+/*.standard-logo{
+    display: table-cell;
+}
+
+#logo-div{
+    height:70px;
+    padding: 32px 0px;
+    color: #EEEEEE;
+    display: inline-block;
+    -webkit-transition: height .4s ease, opacity .3s ease;
+    -o-transition: height .4s ease, opacity .3s ease;
+    transition: height .4s ease, opacity .3s ease;
+}
+
+.not-dark #logo-div{
+    height:60px;
+    padding: 12px 0;
+    display: inline-block;
+    color: #000000;
+}
+
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo #logo-div{
+    height: 60px;
+}
+
+#page-title{
+    padding: 15px 0;
+}
 
 
 
+#header,
+#header-wrap,
+#logo,
+#logo img,
+#primary-menu:not(.style-2),
+#primary-menu:not(.style-2) > ul,
+#primary-menu,
+#primary-menu ul,
+#primary-menu ul li a { height: 70px; }
 
+#primary-menu ul li a { line-height: 70px; }
+
+#primary-menu ul li i { line-height: inherit; }
+
+#primary-menu ul ul,
+#primary-menu ul li .mega-menu-content,
+#primary-menu ul li.mega-menu .mega-menu-content { top: 70px; }
+
+#primary-menu.sub-title ul li a { padding: 27px 20px 32px; }
+
+#top-search,
+#top-cart { margin: 25px 0 25px 15px; }
+
+@media (max-width: 991px) {
+    #primary-menu-trigger { top: 15px; }
+    #top-search a { margin-top: 25px; }
+    #top-search form { height: 70px !important; }
+}
+
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo,#header.sticky-header:not(.static-sticky), #header.sticky-header:not(.static-sticky) #header-wrap, #header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img, #header.sticky-header:not(.static-sticky) #primary-menu, #header.sticky-header:not(.static-sticky) #primary-menu > ul, #header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a{
+    height: 60px;
+}*/
+
+.standard-logo{
+    display: table-cell;
+}
+
+#logo-div{
+    height:70px;
+    padding: 32px 0px;
+    color: #EEEEEE;
+    display: inline-block;
+    -webkit-transition: height .4s ease, opacity .3s ease;
+    -o-transition: height .4s ease, opacity .3s ease;
+    transition: height .4s ease, opacity .3s ease;
+}
+
+.not-dark #logo-div{
+    height:60px;
+    padding: 12px 0;
+    display: inline-block;
+    color: #000000;
+}
+
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo #logo-div{
+    height: 60px;
+}
+
+#page-title{
+    padding: 15px 0;
+}
+
+#header,
+#header-wrap,
+#logo,
+#logo img,
+#primary-menu:not(.style-2),
+#primary-menu:not(.style-2) > ul,
+#primary-menu,
+#primary-menu ul:not(.mega-menu-column),
+#primary-menu ul li a:not(.sf-with-ul)
+#primary-menu ul li a:not(.sf-with-ul) { height: 70px; }
+
+#primary-menu ul li a:not(.sub-menu) { line-height: 22px; }
+
+#primary-menu ul li i:not(.sub-menu) { line-height: 22px; }
+
+#primary-menu ul ul { top: 70px; }
+
+#primary-menu.sub-title ul li a { padding: 27px 20px 32px; }
+
+#top-search,
+#top-cart { margin-top: 24px; }
+
+#primary-menu ul li > a {
+    display: block;
+    line-height: 22px;
+    padding: 24px 15px;
+    color: #444;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    -webkit-transition: margin .4s ease, padding .4s ease;
+    -o-transition: margin .4s ease, padding .4s ease;
+    transition: margin .4s ease, padding .4s ease;
+}
+
+@media (max-width: 991px) {
+    #primary-menu-trigger { top: 25px; }
+    #top-search a { margin-top: 40px; }
+    #top-search form { height: 70px !important; }
+}
+
+#header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo,#header.sticky-header:not(.static-sticky),
+#header.sticky-header:not(.static-sticky) #header-wrap, #header.sticky-header:not(.static-sticky):not(.sticky-style-2) #logo img,
+#header.sticky-header:not(.static-sticky) #primary-menu, #header.sticky-header:not(.static-sticky) #primary-menu > ul,
+#header.sticky-header:not(.static-sticky) #primary-menu > ul > li > a{
+    height: 60px;
+}
+
+#primary-menu ul li .mega-menu-content, #primary-menu ul li.mega-menu .mega-menu-content {
+    top: 100%;
+}
+.content-wrap {
+    position: relative;
+    padding: 20px 0;
+}
+
+#header.full-header #primary-menu.not-logged-in > ul{
+    border-right: 0px !important;
+}
+
+.col_form{
+    margin-bottom: 0px !important;
+    padding-bottom: 25px;
+}
+
+.col_form label.error{
+    display: inline-block !important;
+    margin: 0;
+    float: left;
+    margin-top: 5px;
+}
+
+.btn[disabled]{
+    opacity: 0.65;
+}
+
+.left40percent{
+    left:40%;
+}
+
+.right{
+    text-align: right !important;
+}
+
+#top-account {
+    margin: 16px 0 18px 20px;
+}
+
+.css3-spinner div{
+    background-color: #1ABC9C;
+}
+
+#page-menu, #page-menu-wrap {
+    position: relative;
+    height: initial;
+    line-height: 44px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.post-timeline .entry .entry-timeline, .post-timeline .entry .timeline-divider {
+    border-color: #1ABC9C;
+    color: #1ABC9C;
+}
+
+.postcontent .timeline-border {
+    border-color: #1ABC9C;
+    color: #1ABC9C;
+}
+
+.post-timeline .entry:hover .entry-timeline, .post-timeline .entry:hover .timeline-divider {
+    border-color: #1ABC9C;
+    color: #1ABC9C;
+}
+
+.post-timeline .entry-timeline div.timeline-divider {
+    position: absolute;
+    top: 4px;
+    left: -58px;
+    width: 50px;
+    height: 0;
+    border-top: 1px dashed #1ABC9C;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.entry{
+    padding-left: 15px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border: 1px dashed #1ABC9C;
+}
+
+.postcontent .post-timeline .entry-timeline{
+    top: -5px;
+}
